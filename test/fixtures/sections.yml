@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  room: 1
+  referenceNumber: 1
+  notes: MyText
+  type: MyString
+  instructor: MyString
+  days: MyString
+  start: 2010-12-30 09:55:45
+  end: 2010-12-30 09:55:45
+  building: MyString
+  sectionId: MyString
+  course: 
+
+two:
+  room: 1
+  referenceNumber: 1
+  notes: MyText
+  type: MyString
+  instructor: MyString
+  days: MyString
+  start: 2010-12-30 09:55:45
+  end: 2010-12-30 09:55:45
+  building: MyString
+  sectionId: MyString
+  course: 

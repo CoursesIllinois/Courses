@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  courseNumber: 1
+  hours: 1
+  description: MyText
+  title: MyString
+  major: 
+
+two:
+  courseNumber: 1
+  hours: 1
+  description: MyText
+  title: MyString
+  major: 
