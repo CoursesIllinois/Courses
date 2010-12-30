@@ -7,8 +7,8 @@ class CreateSections < ActiveRecord::Migration
       t.string :type
       t.string :instructor
       t.string :days
-      t.time :start
-      t.time :end
+      t.time :startTime
+      t.time :endTime
       t.string :building
       t.string :sectionId
       t.references :course

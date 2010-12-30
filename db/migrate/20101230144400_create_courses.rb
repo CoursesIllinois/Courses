@@ -2,9 +2,11 @@ class CreateCourses < ActiveRecord::Migration
   def self.up
     create_table :courses do |t|
       t.integer :courseNumber
-      t.integer :hours
+      t.string :hours
       t.text :description
       t.string :title
+      t.string :subjectCode
+      t.integer :subjectId
       t.references :major
 
       t.timestamps
