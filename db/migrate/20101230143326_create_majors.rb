@@ -3,7 +3,7 @@ class CreateMajors < ActiveRecord::Migration
     create_table :majors do |t|
       t.integer :phone
       t.string :webSiteAddress
-      t.string :address2
+      t.text :address2
       t.string :contact
       t.string :contactTitle
       t.text :subjectDescription
