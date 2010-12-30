@@ -1,4 +1,5 @@
 Courses::Application.routes.draw do
+	match 'scrape/:semester/:year' => 'CourseScraper#scrape'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
