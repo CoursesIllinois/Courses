@@ -1,6 +1,7 @@
 class CourseScraperController < ApplicationController
 require 'rubygems'
 require 'xmlsimple'
+require 'Time'
 
 def ParseSemester(year, season)
   
@@ -60,23 +61,26 @@ def ParseSemester(year, season)
 					  :description => course['description'],
 					  :title => course['title'],
 					  :subjectCode => course['subjectCode'],
-					  :subjectId => course['subjectId']
+					  :subjectId => course['subjectId'].to_s.to_i
 					)
+					puts course['title']
 					course.each do |k, v|
 						if k == "section"
 							#print "-------\nSection\n-------\n\n"
 							v.each do |section|
-							  
+							 
+							    
+					      
 							  currentSection = currentCourse.sections.create(
 							    :room => section['room'],
 							    :referenceNumber => section['referenceNumber'].to_s.to_i,
 							    :notes => section['notes'],
 							    :type => section['type'],
 							    :instructor => section['instructor'],
-							    :startTime => section['startTime'],
-							    :endTime => section['endTime'],
+							    :startTime => Time.parse(section['startTime'].to_s),
+							    :endTime => Time.parse(section['endTime'].to_s),
 							    :building => section['building'],
-							    :sectionId => section['sectionId']
+							    :sectionId => section['sectionId'].to_s.to_i
 							  )
 								section.each do |k, v|
 									#print "\t\t\t<" + k + ">"+ v.to_s + "</"+ k+ ">\n"
@@ -117,11 +121,12 @@ end
 		flash[:notice] = "Scraping!"	
 		@semester = params[:semester]
 		@year = params[:year]
-		if (not Course and not Section and not Major)
-		  ParseSemester(@year, @semester)
-		end
 		@majors = Major.all
 		@courses = Course.all
 		@sections = Section.all
+		
+   	if (@courses == [] or @majors == [] or @sections = [])
+		  ParseSemester(@year, @semester)
+		end
 	end
 end
