@@ -1,0 +1,2 @@
+module CoursesDisplayHelper
+end
