@@ -1,0 +1,26 @@
+#courseSelectionContent {
+	background: red;
+	width: 700px;
+	height: 570px;
+}
+
+#left-col{
+	width: 220px;
+	height: 570px;
+	overflow: scroll;
+	float: left;
+}
+
+#center-col{
+	width: 230px;
+	height: 570px;
+	overflow: scroll;
+	float: left;
+}
+
+#right-col{
+	width: 250px;
+	height: 570px;
+	overflow: scroll;
+	float: left;
+}
