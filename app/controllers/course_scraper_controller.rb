@@ -71,9 +71,10 @@ def ParseSemester(year, season)
 					      
 							  currentSection = currentCourse.sections.create(
 							    :room => section['roomNumber'].to_s.to_i,
+							    :days => section['days'],
 							    :referenceNumber => section['referenceNumber'].to_s.to_i,
-							    :notes => section['notes'],
-							    :type => section['type'],
+							    :notes => section['sectionNotes'],
+							    :type => section['sectionType'],
 							    :instructor => section['instructor'],
 							    :startTime => Time.parse(section['startTime'].to_s),
 							    :endTime => Time.parse(section['endTime'].to_s),
