@@ -70,7 +70,7 @@ def ParseSemester(year, season)
 							v.each do |section|
 					      
 							  currentSection = currentCourse.sections.create(
-							    :room => section['room'],
+							    :room => section['roomNumber'].to_s.to_i,
 							    :referenceNumber => section['referenceNumber'].to_s.to_i,
 							    :notes => section['notes'],
 							    :type => section['type'],

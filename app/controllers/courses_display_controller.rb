@@ -1,7 +1,6 @@
 class CoursesDisplayController < ApplicationController
 	def course
 		@major = Major.find(:first, :conditions => {:subjectCode => params[:major]})
-	  flash['notice'] = "HEY"
 		respond_to do |format|
 	    format.js
 	  end

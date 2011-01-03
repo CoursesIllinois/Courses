@@ -1,3 +1,8 @@
 <% @course.sections.each do |section| %>
-	<%= section.sectionId %><br />
+	Days: <%= section.days %><br />
+	Time: <%= section.startTime %> - <%= section.endTime %> <br />
+	Type: <%= section.type %><br />
+	Building: <%= section.building %><br />
+	Instructor: <%= section.instructor %><br />
+	Room: <%= section.room %><br />
 <% end %>
