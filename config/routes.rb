@@ -1,8 +1,9 @@
 Courses::Application.routes.draw do
 
-	match 'courses/:major/:course' => 'CoursesDisplay#course'
-	match 'courses/:major' => 'CoursesDisplay#major'
+	match 'courses/:major/:course' => 'CoursesDisplay#section'
+	match 'courses/:major' => 'CoursesDisplay#course'
 	match 'courses/' => 'CoursesDisplay#index'
+	
 	match 'scrape/:semester/:year' => 'CourseScraper#scrape'
   # The priority is based upon order of creation:
   # first created -> highest priority.

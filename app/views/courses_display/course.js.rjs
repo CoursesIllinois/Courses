@@ -1,0 +1,1 @@
+page.replace_html("center-col", :partial => "course", :object => @major)
