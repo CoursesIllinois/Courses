@@ -9,8 +9,9 @@
 	<% end %>
 	">
 		<a href="<%= "courses/"+ params[:major] + "/" + course.courseNumber.to_s %>" data-remote="true">
-			<p class="title"><%= course.courseNumber.to_s %></p>
-			<p class="subtext"><%= course.title %></p></a>
+			
+				<div id="left"><div class="title"><%= course.courseNumber %></div></div>
+			<div class="subtext"><%= course.title %></div></a>
 	</li>
 	<% count += 1 %>
 <% end %>

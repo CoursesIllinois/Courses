@@ -28,6 +28,11 @@ ul{
 
 li{
 	width: 100%;
+	display: table;
+	-moz-box-shadow: 3px 3px 3px #666;
+	-webkit-box-shadow: 3px 3px 3px #666;
+	box-shadow: 3px 3px 3px #666;
+	margin-bottom: 5px;
 }
 
 li:hover{
@@ -42,36 +47,48 @@ li:hover{
 	width: 55px;
 	text-align: center;
 	height: inherit;
-	float: left;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	padding: 2px 0 2px 0;
+	display: table-cell;
+	vertical-align: middle;
 }
 
+#left {
+    width: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+
+li a{
+	display:block;
+}
 .subtext{
-	width: 140px;
+	width: 200px;
 	display: block;
-	float: left;
 	padding: 10px 0 10px 10px;
+	display: table-cell;
 }
 #major-col{
-	width: 220px;
+	width: 250px;
 	height: 570px;
-	overflow: scroll;
+	overflow-y: scroll;
 	float: left;
 }
 
 #course-col{
-	width: 230px;
+	width: 250px;
 	height: 570px;
-	overflow: scroll;
+	overflow-y: scroll;
 	float: left;
 }
 
 #section-col{
-	width: 250px;
+	width: 200px;
 	height: 570px;
-	overflow: scroll;
+	overflow: auto;
 	float: left;
 }
 

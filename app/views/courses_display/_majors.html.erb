@@ -9,8 +9,8 @@
 	<% end %>
 	">
 		<a href="<%= "courses/" + major.subjectCode %>" data-remote="true">
-			<p class="title"><%= major.subjectCode %></p>
-			<p class="subtext"><%= major.subjectDescription %></p></a>
+			<div id="left"><div class="title"><%= major.subjectCode %></div></div>
+			<div class="subtext"><%= major.subjectDescription %></div></a>
 	</li>
 	<% count += 1 %>
 <% end %>
