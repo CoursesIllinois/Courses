@@ -1,3 +1,17 @@
+<ul>
+<% count = 0 %>
 <% majors.each do |major| %>
-	<%= link_to ( major.subjectCode, major.subjectCode, :remote => true) %> - <%= major.subjectDescription %><br />
+	<li class="
+	<% if (count % 2 == 0) %> 
+		odd
+	<% else %>
+		even
+	<% end %>
+	">
+		<a href="<%= "courses/" + major.subjectCode %>" data-remote="true">
+			<p class="title"><%= major.subjectCode %></p>
+			<p class="subtext"><%= major.subjectDescription %></p></a>
+	</li>
+	<% count += 1 %>
 <% end %>
+</ul>

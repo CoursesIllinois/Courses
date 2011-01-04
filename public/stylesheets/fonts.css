@@ -1,0 +1,154 @@
+.afs-charis-sil { font-family: "Charis SIL", "Georgia", "Palatino", "Times New Roman", "Baskerville", "Hoefler Text", serif; ;}
+
+.afs-nobile { font-family: "Nobile", "Lucida Grande", "Verdana", "Arial", "Helvetica", "Gill Sans", sans-serif; font-size: 84.41%;}
+
+.afs-pt-sans { font-family: "PT Sans", "Arial", "Helvetica", "Gill Sans", "Lucida Grande", "Verdana", sans-serif; font-size: 96.40%;}
+
+.afs-liberation-mono { font-family: "Liberation Mono", Menlo, Courier New, Courier, Mono, monospace; font-size: 91.29%;}
+
+
+@font-face {
+  font-family: Charis SIL;
+  src: url('/fonts/Charis-SIL/CharisSILB-webfont.ttf');
+  src: local('☺'), url('/fonts/Charis-SIL/CharisSILB-webfont.woff') format('woff'), url('/fonts/Charis-SIL/CharisSILB-webfont.ttf') format('truetype'), url('/fonts/Charis-SIL/CharisSILB-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Charis SIL;
+  src: url('/fonts/Charis-SIL/CharisSILBI-webfont.ttf');
+  src: local('☺'), url('/fonts/Charis-SIL/CharisSILBI-webfont.woff') format('woff'), url('/fonts/Charis-SIL/CharisSILBI-webfont.ttf') format('truetype'), url('/fonts/Charis-SIL/CharisSILBI-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: Charis SIL;
+  src: url('/fonts/Charis-SIL/CharisSILR-webfont.ttf');
+  src: local('☺'), url('/fonts/Charis-SIL/CharisSILR-webfont.woff') format('woff'), url('/fonts/Charis-SIL/CharisSILR-webfont.ttf') format('truetype'), url('/fonts/Charis-SIL/CharisSILR-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Charis SIL;
+  src: url('/fonts/Charis-SIL/CharisSILI-webfont.ttf');
+  src: local('☺'), url('/fonts/Charis-SIL/CharisSILI-webfont.woff') format('woff'), url('/fonts/Charis-SIL/CharisSILI-webfont.ttf') format('truetype'), url('/fonts/Charis-SIL/CharisSILI-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+@font-face {
+  font-family: Nobile;
+  src: url('/fonts/Nobile/nobile_bold-webfont.ttf');
+  src: local('☺'), url('/fonts/Nobile/nobile_bold-webfont.woff') format('woff'), url('/fonts/Nobile/nobile_bold-webfont.ttf') format('truetype'), url('/fonts/Nobile/nobile_bold-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Nobile;
+  src: url('/fonts/Nobile/nobile_bold_italic-webfont.ttf');
+  src: local('☺'), url('/fonts/Nobile/nobile_bold_italic-webfont.woff') format('woff'), url('/fonts/Nobile/nobile_bold_italic-webfont.ttf') format('truetype'), url('/fonts/Nobile/nobile_bold_italic-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: Nobile;
+  src: url('/fonts/Nobile/nobile-webfont.ttf');
+  src: local('☺'), url('/fonts/Nobile/nobile-webfont.woff') format('woff'), url('/fonts/Nobile/nobile-webfont.ttf') format('truetype'), url('/fonts/Nobile/nobile-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Nobile;
+  src: url('/fonts/Nobile/nobile_italic-webfont.ttf');
+  src: local('☺'), url('/fonts/Nobile/nobile_italic-webfont.woff') format('woff'), url('/fonts/Nobile/nobile_italic-webfont.ttf') format('truetype'), url('/fonts/Nobile/nobile_italic-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+@font-face {
+  font-family: PT Sans;
+  src: url('/fonts/PT-Sans/PTS56F-webfont.ttf');
+  src: local('☺'), url('/fonts/PT-Sans/PTS56F-webfont.woff') format('woff'), url('/fonts/PT-Sans/PTS56F-webfont.ttf') format('truetype'), url('/fonts/PT-Sans/PTS56F-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: PT Sans;
+  src: url('/fonts/PT-Sans/PTS75F-webfont.ttf');
+  src: local('☺'), url('/fonts/PT-Sans/PTS75F-webfont.woff') format('woff'), url('/fonts/PT-Sans/PTS75F-webfont.ttf') format('truetype'), url('/fonts/PT-Sans/PTS75F-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: PT Sans;
+  src: url('/fonts/PT-Sans/PTS76F-webfont.ttf');
+  src: local('☺'), url('/fonts/PT-Sans/PTS76F-webfont.woff') format('woff'), url('/fonts/PT-Sans/PTS76F-webfont.ttf') format('truetype'), url('/fonts/PT-Sans/PTS76F-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: PT Sans;
+  src: url('/fonts/PT-Sans/PTS55F-webfont.ttf');
+  src: local('☺'), url('/fonts/PT-Sans/PTS55F-webfont.woff') format('woff'), url('/fonts/PT-Sans/PTS55F-webfont.ttf') format('truetype'), url('/fonts/PT-Sans/PTS55F-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: Liberation Mono;
+  src: url('/fonts/Liberation-Mono/LiberationMono-Bold-webfont.ttf');
+  src: local('☺'), url('/fonts/Liberation-Mono/LiberationMono-Bold-webfont.woff') format('woff'), url('/fonts/Liberation-Mono/LiberationMono-Bold-webfont.ttf') format('truetype'), url('/fonts/Liberation-Mono/LiberationMono-Bold-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Liberation Mono;
+  src: url('/fonts/Liberation-Mono/LiberationMono-BoldItalic-webfont.ttf');
+  src: local('☺'), url('/fonts/Liberation-Mono/LiberationMono-BoldItalic-webfont.woff') format('woff'), url('/fonts/Liberation-Mono/LiberationMono-BoldItalic-webfont.ttf') format('truetype'), url('/fonts/Liberation-Mono/LiberationMono-BoldItalic-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: Liberation Mono;
+  src: url('/fonts/Liberation-Mono/LiberationMono-Regular-webfont.ttf');
+  src: local('☺'), url('/fonts/Liberation-Mono/LiberationMono-Regular-webfont.woff') format('woff'), url('/fonts/Liberation-Mono/LiberationMono-Regular-webfont.ttf') format('truetype'), url('/fonts/Liberation-Mono/LiberationMono-Regular-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Liberation Mono;
+  src: url('/fonts/Liberation-Mono/LiberationMono-Italic-webfont.ttf');
+  src: local('☺'), url('/fonts/Liberation-Mono/LiberationMono-Italic-webfont.woff') format('woff'), url('/fonts/Liberation-Mono/LiberationMono-Italic-webfont.ttf') format('truetype'), url('/fonts/Liberation-Mono/LiberationMono-Italic-webfont.svg#webfontX4pGz9fc') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}

@@ -1,26 +1,79 @@
-#courseSelectionContent {
-	background: red;
-	width: 700px;
-	height: 570px;
+#wrapper{
+	width: 960px;
+	margin: 0 auto;
 }
 
-#left-col{
+#header h1{
+	color: white;
+	font-size: 2.5em;
+	font-weight: normal;
+}
+
+#header h2{
+	color: #bbbbbb;
+	font-size: 1.2em;
+	font-weight: normal;
+	padding-bottom: 10px;
+}
+
+#courseSelectionContent {
+	width: 700px;
+	height: 570px;
+	background: white;
+	font-size: .85em;
+}
+
+ul{
+}
+
+li{
+	width: 100%;
+}
+
+li:hover{
+	background: #f7d7a0;
+}
+
+.title{
+	box-shadow:inset 0 0 10px #000000;
+	-moz-box-shadow:inset 0 2px 5px #000000;
+	background: #686868;
+	color: #bcbbbb;
+	width: 55px;
+	text-align: center;
+	height: inherit;
+	float: left;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 2px 0 2px 0;
+}
+
+.subtext{
+	width: 140px;
+	display: block;
+	float: left;
+	padding: 10px 0 10px 10px;
+}
+#major-col{
 	width: 220px;
 	height: 570px;
 	overflow: scroll;
 	float: left;
 }
 
-#center-col{
+#course-col{
 	width: 230px;
 	height: 570px;
 	overflow: scroll;
 	float: left;
 }
 
-#right-col{
+#section-col{
 	width: 250px;
 	height: 570px;
 	overflow: scroll;
 	float: left;
 }
+
+.odd{ background: #dddddd;}
+.even{ background: #ffffff;}

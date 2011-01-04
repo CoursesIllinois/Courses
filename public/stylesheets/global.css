@@ -1,0 +1,16 @@
+/* reset */
+*{
+	margin: 0;
+	padding: 0;
+	color: black;
+	text-decoration: none;
+	font-size: 1em;
+	overflow: hidden;
+	font-weight: 0;
+	font-style: normal;
+	list-style-type: none;
+}
+body{
+	
+	background: #262626;
+}
