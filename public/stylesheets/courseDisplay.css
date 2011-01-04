@@ -18,7 +18,7 @@
 }
 
 #courseSelectionContent {
-	width: 700px;
+	width: 730px;
 	height: 570px;
 	background: white;
 	font-size: .85em;
@@ -88,7 +88,7 @@ li a{
 }
 
 #section-col{
-	width: 200px;
+	width: 230px;
 	height: 570px;
 	overflow: auto;
 	float: left;

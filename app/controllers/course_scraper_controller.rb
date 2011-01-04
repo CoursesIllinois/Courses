@@ -1,7 +1,6 @@
 class CourseScraperController < ApplicationController
 require 'rubygems'
 require 'xmlsimple'
-require 'Time'
 
 def ParseSemester(year, season)
   

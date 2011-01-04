@@ -3,7 +3,7 @@
 			<% session[:mySections].each do |section| %>
 				<li>
 					<% course = Course.find(Section.find(section).course_id) %>
-					<%= link_to ( '-', remove_section_path(section), :remote => true, :id => "remove") %><span class="course"><%= course.subjectCode %><%= course.courseNumber %></span>
+					<%= link_to ( '-', remove_section_path(section), :remote => true, :id => "remove") %><span class="course"><%= course.subjectCode %> <%= course.courseNumber %></span>
 					<span class="section"><%= Section.find(section).sectionId %></span>
 				</li>
 			<% end %>
