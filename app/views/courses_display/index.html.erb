@@ -10,4 +10,11 @@
 		<div id="course-col">select a major</div>
 		<div id="section-col">select a course</div>
 	</div>
+	<div id="myCourses">
+		<% if session[:mySections] %>
+			<% session[:mySections].each do |section| %>
+				<%= section %>
+			<% end %>
+		<% end%>
+	</div>
 </div>

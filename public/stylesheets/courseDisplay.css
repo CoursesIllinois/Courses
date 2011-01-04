@@ -35,7 +35,7 @@ li{
 	margin-bottom: 5px;
 }
 
-li:hover{
+a:hover{
 	background: #f7d7a0;
 }
 
@@ -90,6 +90,13 @@ li a{
 	height: 570px;
 	overflow: auto;
 	float: left;
+}
+
+#section-col li{
+	
+	-moz-box-shadow: 0px 0px 0px #666;
+	-webkit-box-shadow: 0px 0px 0px #666;
+	box-shadow: 0px 0px 0px #666;
 }
 
 .odd{ background: #dddddd;}

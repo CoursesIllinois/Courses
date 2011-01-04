@@ -1,8 +1,21 @@
 <% @course.sections.each do |section| %>
-	Days: <%= section.days %><br />
-	Time: <%= section.startTime %> - <%= section.endTime %> <br />
-	Type: <%= section.type %><br />
-	Building: <%= section.building %><br />
-	Instructor: <%= section.instructor %><br />
-	Room: <%= section.room %><br />
+<ul>
+<li>Section: <%= section.sectionId %> </li>
+<li>Days: <%= section.days %></li>
+	<li>
+		Time: <%= section.startTime %> - <%= section.endTime %>
+	</li>
+	<li>
+		Type: <%= section.type %>
+	</li>
+	<li>
+		Building: <%= section.building %>
+	</li>
+	<li>
+		Instructor: <%= section.instructor %>
+	</li>
+	<li>
+		Room: <%= section.room %>
+	</li>
+</ul>	
 <% end %>

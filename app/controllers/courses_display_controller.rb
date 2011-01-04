@@ -1,4 +1,32 @@
+=begin
+  This controller is responsible for displaying the course selection
+  scene as well as powering the add/remove section functions for the session
+=end  
 class CoursesDisplayController < ApplicationController
+
+# Retrieves the current users sections
+  def users_sections
+    unless session[:mySections]
+      session[:mySections] = []
+    end
+    session[:mySections]
+  end
+
+  def add_section
+    @mySections = users_sections
+    @mySections << params[:section_id]
+    flash['notice'] = "Section " + params[:section_id] + " Added!"
+    redirect_to '/courses/'
+  end
+  
+  def remove_section
+    @mySections = users_sections
+    if( params[:section_id] == @mySections.delete(params[:section_id]))
+        flash['notice'] = "Section "+ params[:section_id] + " removed!"
+    end
+    redirect_to '/courses/'
+  end
+  
 	def course
 		@major = Major.find(:first, :conditions => {:subjectCode => params[:major]})
 		respond_to do |format|
@@ -12,9 +40,6 @@ class CoursesDisplayController < ApplicationController
 		respond_to do |format|
 		  format.js
 	  end
-	end
-	
-	def major
 	end
 	
 	def index

@@ -8,7 +8,7 @@
 		even
 	<% end %>
 	">
-		<a href="<%= "courses/"+ params[:major] + "/" + course.courseNumber.to_s %>" data-remote="true">
+		<a href="<%=  params[:major] + "/" + course.courseNumber.to_s %>" data-remote="true">
 			
 				<div id="left"><div class="title"><%= course.courseNumber %></div></div>
 			<div class="subtext"><%= course.title %></div></a>
