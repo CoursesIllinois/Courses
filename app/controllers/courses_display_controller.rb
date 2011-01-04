@@ -15,8 +15,9 @@ class CoursesDisplayController < ApplicationController
   def add_section
     @mySections = users_sections
     @mySections << params[:section_id]
+    respond_to {|format| format.js}
     flash['notice'] = "Section " + params[:section_id] + " Added!"
-    redirect_to '/courses/'
+    #redirect_to '/courses/'
   end
   
   def remove_section
@@ -24,7 +25,9 @@ class CoursesDisplayController < ApplicationController
     if( params[:section_id] == @mySections.delete(params[:section_id]))
         flash['notice'] = "Section "+ params[:section_id] + " removed!"
     end
-    redirect_to '/courses/'
+    respond_to do |format|
+      format.js
+    end
   end
   
 	def course

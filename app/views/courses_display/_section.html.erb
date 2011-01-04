@@ -1,9 +1,19 @@
 <% @course.sections.each do |section| %>
+
+<div id="section-header">
+	<a href="<%= add_section_path(section.id) %>" data-remote="true" id="add">+</a>
+	<span class="left"><strong>Section: </strong><%= section.sectionId %></span>
+	<span class="right"><strong>CRN: </strong><%= section.referenceNumber %></span>
+</div>
+
 <ul>
-<li>Section: <%= section.sectionId %> </li>
-<li>Days: <%= section.days %></li>
+	<% if(section.days ) %>
+	<li>Days: <%= section.days %></li>
+	<% end %>
 	<li>
-		Time: <%= section.startTime %> - <%= section.endTime %>
+		<% if not (section.startTime.to_i == section.endTime.to_i) %>
+		Time: <%= section.startTime.strftime("%l:%M %p") %> - <%= section.endTime.strftime("%l:%M %p") %>
+		<% end %>
 	</li>
 	<li>
 		Type: <%= section.type %>
@@ -15,7 +25,9 @@
 		Instructor: <%= section.instructor %>
 	</li>
 	<li>
+		<% if section.room != 0 %>
 		Room: <%= section.room %>
+		<% end %>
 	</li>
 </ul>	
 <% end %>

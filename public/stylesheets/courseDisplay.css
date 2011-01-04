@@ -1,6 +1,7 @@
 #wrapper{
 	width: 960px;
 	margin: 0 auto;
+	position: relative;
 }
 
 #header h1{
@@ -21,12 +22,32 @@
 	height: 570px;
 	background: white;
 	font-size: .85em;
+	float: left;
+	position: relative;
 }
 
-ul{
+#myCourses {
+    background: none repeat scroll 0 0 #82acb5;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    padding: 10px;
 }
 
-li{
+#myCourses-header {
+    background: #626262;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+    color: #eeeeee;
+}
+#myCourses-content {
+    background: #3b3b3b;
+    margin-top: 10px;
+}
+
+
+#courseSelectionContent li{
 	width: 100%;
 	display: table;
 	-moz-box-shadow: 3px 3px 3px #666;
@@ -92,12 +113,69 @@ li a{
 	float: left;
 }
 
-#section-col li{
-	
-	-moz-box-shadow: 0px 0px 0px #666;
-	-webkit-box-shadow: 0px 0px 0px #666;
-	box-shadow: 0px 0px 0px #666;
+#section-col ul {
+    padding: 10px;
+    background: #686868;
+    color: white;
 }
+#section-col li {
+    -moz-box-shadow: 0 0 0 #666666;
+    margin: 0;
+    color: #dddddd;
+}
+
+#section-header{
+	background: #dddddd;
+	padding: 7px;
+}
+
+#add{
+    height: 18px;
+    width: 18px;
+    display: block;
+    float: left;
+    background: green;
+    text-align: center;
+    margin: 0px 5px 0px 0px;
+    color: #eeeeee;
+    font-size: 1.0em;
+}
+
+#remove {
+    background: none repeat scroll 0 0 #da4444;
+    color: #EEEEEE;
+    display: block;
+    font-size: 1em;
+    height: 0px;
+    text-align: center;
+    width: 18px;
+    display: table-cell;
+    padding: 5px;
+}
+#myCourses li {
+    border-bottom: 1px solid #333333;
+    display: table;
+}
+span.course {
+    background: none repeat scroll 0 0 #c4c4c4;
+    vertical-align: middle;
+    display: table-cell;
+	min-width: 122px;
+	text-align: center;
+    padding: 5px;
+}
+span.section {
+    background: none repeat scroll 0 0 orange;
+    padding: 5px;
+    vertical-align: middle;
+	text-align: center;
+    display: table-cell;
+	min-width: 30px;
+}
+
+
+.left{text-align: left;}
+.right{float: right;}
 
 .odd{ background: #dddddd;}
 .even{ background: #ffffff;}

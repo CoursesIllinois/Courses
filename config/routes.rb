@@ -1,8 +1,8 @@
 Courses::Application.routes.draw do
   
   # CoursesDisplay Routes
-  match 'courses/:major/:course/remove_section/:section_id' => 'CoursesDisplay#remove_section'
-  match 'courses/:major/:course/add_section/:section_id' => 'CoursesDisplay#add_section'
+  match 'courses/remove_section/:section_id' => 'CoursesDisplay#remove_section', :as => :remove_section
+  match 'courses/add_section/:section_id' => 'CoursesDisplay#add_section', :as => :add_section
 	match 'courses/:major/:course' => 'CoursesDisplay#section', :as => :showSections
 	match 'courses/:major' => 'CoursesDisplay#course', :as => :showCourses
 	match 'courses/' => 'CoursesDisplay#index', :as => :courses
