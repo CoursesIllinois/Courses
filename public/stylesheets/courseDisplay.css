@@ -26,25 +26,6 @@
 	position: relative;
 }
 
-#myCourses {
-    background: none repeat scroll 0 0 #82acb5;
-    position: absolute;
-    right: 0;
-    min-width: 200px;
-    padding: 10px;
-}
-
-#myCourses-header {
-    background: #626262;
-    text-align: center;
-    padding: 8px;
-    font-weight: bold;
-    color: #eeeeee;
-}
-#myCourses-content {
-    background: #3b3b3b;
-    margin-top: 10px;
-}
 
 
 #courseSelectionContent li{
@@ -152,11 +133,44 @@ li a{
     display: table-cell;
     padding: 5px;
 }
+
+
+#myCourses {
+    background: none repeat scroll 0 0 #82acb5;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    padding: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#myCourses-header {
+    background: #626262;
+    text-align: center;
+    padding: 8px;
+    font-weight: normal;
+	font-size: 1.3em;
+    color: #eeeeee;
+	box-shadow:inset 0 0 10px #000000;
+	-moz-box-shadow:inset 0 2px 5px #000000;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#myCourses-content {
+    background: #3b3b3b;
+    margin-top: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
 #myCourses li {
+	
     border-bottom: 1px solid #333333;
     display: table;
 }
 span.course {
+	
     background: none repeat scroll 0 0 #c4c4c4;
     vertical-align: middle;
     display: table-cell;
@@ -173,6 +187,16 @@ span.section {
 	min-width: 30px;
 }
 
+.round-topleft{
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	border-top-left-radius: 5px;
+}
+.round-topright{
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;
+}
 
 .left{text-align: left;}
 .right{float: right;}
