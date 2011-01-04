@@ -8,7 +8,7 @@
 		even
 	<% end %>
 	">
-		<a href="<%= major.subjectCode %>" data-remote="true">
+		<a href="<%= showCourses_path(major.subjectCode) %>" data-remote="true">
 			<div id="left"><div class="title"><%= major.subjectCode %></div></div>
 			<div class="subtext"><%= major.subjectDescription %></div></a>
 	</li>
