@@ -1,1 +1,5 @@
-This is it.
+Building database
+- http://localhost:3000/scrape/spring/2011
+
+Viewing courses
+- http://localhost:3000/courses
