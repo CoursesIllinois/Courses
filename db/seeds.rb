@@ -1,6 +1,8 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
+require 'xmlsimple'
+
 def ParseSemester(year, season)
 
   # Initialize
@@ -20,40 +22,41 @@ def ParseSemester(year, season)
   xml_data = Net::HTTP.get_response(URI.parse(url)).body
 
   # Turn the string into a hash of data 
-  catalog = XmlSimple.xml_in(xml_data)
+  catalog = XmlSimple.xml_in(xml_data, 'ForceArray' => ['subject'], 'SuppressEmpty' => nil)
 
   # Iterate through the subjects found in the hash
   catalog['subject'].each do |subject|
 
-    puts "-------\nSubject\n-------\n"
+    puts "-------\n#{subject['subjectCode']}\n-------\n"
 
     # Add the subject/major to the database
-    currentMajor = Major.create(:phone => subject['phone'][0].delete("-").to_i,
-        :webSiteAddress => subject['webSiteAddress'][0],
-        :address2 => subject['address2'][0],
-        :contact => subject['contact'][0],
-        :contactTitle => subject['contactTitle'][0],
-        :subjectDescription => subject['subjectDescription'][0],
-        :subjectCode => subject['subjectCode'][0],
-        :unitName => subject['unitName'][0]
+    currentMajor = Major.create(
+        :phone => subject['phone'],
+        :webSiteAddress => subject['webSiteAddress'],
+        :address2 => subject['address2'],
+        :contact => subject['contact'],
+        :contactTitle => subject['contactTitle'],
+        :subjectDescription => subject['subjectDescription'],
+        :subjectCode => subject['subjectCode'],
+        :unitName => subject['unitName']
         )
 
     # Build a url based off of the current subject code
-    subjectURL = base_url + "/schedule/" + subject['subjectCode'][0] + "/index.xml"
+    subjectURL = base_url + "/schedule/" + subject['subjectCode'] + "/index.xml"
 
     # Fetch the courses for the subject and decrypt the data from the url
     subjectXML_data = Net::HTTP.get_response(URI.parse(subjectURL)).body
-    subjectCourses = XmlSimple.xml_in(subjectXML_data)['course']
+    subjectCourses = XmlSimple.xml_in(subjectXML_data, 'ForceArray' => ['course','section'], 'SuppressEmpty' => nil)['subject']['course']
 
     # Iterate through the courses offered in the class 
     subjectCourses.each do |course|
       currentCourse = currentMajor.courses.create(
-          :courseNumber => course['courseNumber'][0].to_i,
-          :hours => course['hours'][0],
-          :description => course['description'][0],
-          :title => course['title'][0],
-          :subjectCode => course['subjectCode'][0],
-          :subjectId => course['subjectId'][0].to_i
+          :courseNumber => course['courseNumber'].to_i,
+          :hours => course['hours'],
+          :description => course['description'],
+          :title => course['title'],
+          :subjectCode => course['subjectCode'],
+          :subjectId => course['subjectId'].to_i
           )
 
       puts currentCourse.title
@@ -61,16 +64,16 @@ def ParseSemester(year, season)
       courseSections = course['section']
       courseSections.each do |section|
         currentSection = currentCourse.sections.create(
-            :room => section['roomNumber'][0].to_i,
-            :days => section['days'][0],
-            :referenceNumber => section['referenceNumber'][0].to_i,
-            :notes => section['sectionNotes'][0],
-            :type => section['sectionType'][0],
-            :instructor => section['instructor'][0],
-            :startTime => Time.parse(section['startTime'][0]),
-            :endTime => Time.parse(section['endTime'][0]),
-            :building => section['building'][0],
-            :sectionId => section['sectionId'][0]
+            :room => section['roomNumber'].to_i,
+            :days => section['days'],
+            :referenceNumber => section['referenceNumber'].to_i,
+            :notes => section['sectionNotes'],
+            :type => section['sectionType'],
+            :instructor => section['instructor'],
+            :startTime => (Time.parse(section['startTime']) rescue nil), #NOTE Time value can be "ARRANGED", not an actual time, so should we store this?
+            :endTime => (Time.parse(section['endTime']) rescue nil),
+            :building => section['building'],
+            :sectionId => section['sectionId']
             )
       end
     end
