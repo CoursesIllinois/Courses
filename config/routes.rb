@@ -1,8 +1,10 @@
 Courses::Application.routes.draw do
   
+  resources :users
+
   # Authentication Routes
   match 'auth/:provider/:callback' => 'Sessions#create'
-  
+
   # CoursesDisplay Routes
   match 'courses/remove_section/:section_id' => 'CoursesDisplay#remove_section', :as => :remove_section
   match 'courses/add_section/:section_id' => 'CoursesDisplay#add_section', :as => :add_section

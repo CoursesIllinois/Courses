@@ -1,5 +1,6 @@
 Building database
-- http://localhost:3000/scrape/spring/2011
+- Make sure schema is updated (all migrations are done), and then execute rake db:seed to seed the database with spring 2011 course data
+- Alternately, you can just run rake db:setup to setup the entire database (and make sure migrated to latest version of schema)
 
 Viewing courses
 - http://localhost:3000/courses
