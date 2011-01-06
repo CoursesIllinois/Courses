@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+skip_before_filter :authenticate
   
   def create
     auth = request.env['rack.auth']
