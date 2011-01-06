@@ -1,7 +1,7 @@
 <% count = 0 %>
 <% @major.courses.each do |course| %>
 
-	<li class="<%= (count % 2 == 0) ? "odd" : "even "%>">
+">
 		<a href="<%=  showSections_path(@major.subjectCode, course.courseNumber.to_s) %>" data-remote="true">
 			
 				<div id="left"><div class="title"><%= course.courseNumber %></div></div>
