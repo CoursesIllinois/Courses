@@ -1,8 +1,7 @@
 <%= flash['notice'] %>
-
 <div id="wrapper">
 	<div id="header">
-		<h1 class="afs-charis-sil">Hey there Kiran.</h1>
+		<h1 class="afs-charis-sil">Hey there <%= current_user.firstname %>.</h1>
 		<h2 class="afs-pt-sans">Let's add your classes.</h2>
 	</div>
 	<div id="courseSelectionContent" class="afs-pt-sans">

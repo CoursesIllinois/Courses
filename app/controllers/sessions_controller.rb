@@ -12,8 +12,8 @@ class SessionsController < ApplicationController
     end
 
     self.current_user = @auth.user 
-    render :text => "Welcome, #{session['user_id']}, #{current_user.firstname}" 
-    # redirect_to courses_path
+    #render :text => "Welcome, #{session['user_id']}, #{current_user.firstname}" 
+    redirect_to courses_path
   end
   
 end
