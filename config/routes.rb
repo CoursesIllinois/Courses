@@ -2,6 +2,10 @@ Courses::Application.routes.draw do
 
   root :to => 'Home#index', :as => :welcome
   
+  # Login button routes
+  match 'login/student' => 'home#student', :as => :student_login
+  match 'login/teacher' => 'home#teacher', :as => :teacher_login
+
   resources :users
 
   # Authentication Routes
