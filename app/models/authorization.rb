@@ -1,3 +1,3 @@
 class Authorization < ActiveRecord::Base
-# belongs to user
+ belongs_to :user
 end
