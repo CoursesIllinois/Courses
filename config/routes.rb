@@ -8,12 +8,13 @@ Courses::Application.routes.draw do
   # CoursesDisplay Routes
   match 'courses/remove_section/:section_id' => 'CoursesDisplay#remove_section', :as => :remove_section
   match 'courses/add_section/:section_id' => 'CoursesDisplay#add_section', :as => :add_section
-	match 'courses/:major/:course' => 'CoursesDisplay#section', :as => :showSections
-	match 'courses/:major' => 'CoursesDisplay#course', :as => :showCourses
-	match 'courses/' => 'CoursesDisplay#index', :as => :courses
+  match 'courses/:major/:course' => 'CoursesDisplay#section', :as => :showSections
+  match 'courses/:major' => 'CoursesDisplay#course', :as => :showCourses
+  match 'courses/' => 'CoursesDisplay#index', :as => :courses
 	
-	# Scraper Routes
-	match 'scrape/:semester/:year' => 'CourseScraper#scrape'
+  # Scraper Routes
+  match 'scrape/:semester/:year' => 'CourseScraper#scrape'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
