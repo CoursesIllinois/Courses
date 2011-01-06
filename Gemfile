@@ -6,7 +6,13 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
+
+# XML Parsing Gem
 gem 'xml-simple'
+
+# Authentication Gem
+gem 'omniauth'
+gem 'oa-openid', :require => 'omniauth/openid'
 
 # Use unicorn as the web server
 # gem 'unicorn'
