@@ -4,6 +4,8 @@
 =end  
 class CoursesDisplayController < ApplicationController
 
+layout "coursesdisplay"
+
 # Retrieves the current users sections
   def users_sections
     unless session[:mySections]
