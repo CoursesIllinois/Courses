@@ -1,4 +1,14 @@
 class ApplicationController < ActionController::Base
+  before_filter :authenticate
+
+  def authenticate 
+    flash['notice'] = ""
+    if not signed_in?
+      redirect_to welcome_path  
+      flash['notice'] = "You need to be signed in to do that!"
+    end
+  end
+
   protect_from_forgery
 
   protected

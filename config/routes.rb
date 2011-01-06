@@ -1,6 +1,6 @@
 Courses::Application.routes.draw do
 
-  root :to => 'Home#index'
+  root :to => 'Home#index', :as => :welcome
   
   resources :users
 
@@ -15,7 +15,7 @@ Courses::Application.routes.draw do
   match 'courses/' => 'CoursesDisplay#index', :as => :courses
 	
   # Scraper Routes
-  match 'scrape/:semester/:year' => 'CourseScraper#scrape'
+#  match 'scrape/:semester/:year' => 'CourseScraper#scrape'
 
 
   # The priority is based upon order of creation:
