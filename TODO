@@ -1,2 +1,3 @@
 - Add indexes to foreign key relations and join tables
 - Change phone number for courses/majors back to a number?
+- Use a single int to compress storage of notify_prefs?
