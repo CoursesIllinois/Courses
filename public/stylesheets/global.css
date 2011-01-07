@@ -10,7 +10,32 @@
 	font-style: normal;
 	list-style-type: none;
 }
+html{
+  background: #262626;
+}
+
 body{
 	background: #262626;
 }
+
+#google-sso{
+  display:block;
+  background: url('../images/googlesso.png');
+  width: 151px;
+  height: 24px;
+}
+
+h1{
+    color: white;
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+h2{
+    color: #bbbbbb;
+    font-size: 1.2em;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
 

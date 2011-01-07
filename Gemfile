@@ -24,6 +24,9 @@ gem 'oa-openid', :require => 'omniauth/openid'
 # gem 'ruby-debug'
 gem 'ruby-debug19'
 
+# For a more useful and cooler console
+gem 'wirble'
+
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'

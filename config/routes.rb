@@ -1,5 +1,11 @@
 Courses::Application.routes.draw do
+
+  root :to => 'Home#index', :as => :welcome
   
+  # Login button routes
+  match 'login/student' => 'home#student', :as => :student_login
+  match 'login/teacher' => 'home#teacher', :as => :teacher_login
+
   resources :users
 
   # Authentication Routes
@@ -13,7 +19,8 @@ Courses::Application.routes.draw do
   match 'courses/' => 'CoursesDisplay#index', :as => :courses
 	
   # Scraper Routes
-  match 'scrape/:semester/:year' => 'CourseScraper#scrape'
+#  match 'scrape/:semester/:year' => 'CourseScraper#scrape'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
