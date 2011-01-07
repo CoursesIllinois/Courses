@@ -5,13 +5,13 @@ def index
 end
 
 def teacher
-  @isStudent = false
+  logger.debug "Teacher!\n"
   session['isStudent'] = false
   redirect_to "/auth/google"
 end
 
 def student
-  @isStudent = true
+  logger.debug "student\n"
   session['isStudent'] = true
   redirect_to "/auth/google"
 end
