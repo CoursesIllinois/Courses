@@ -53,6 +53,11 @@ layout "coursesdisplay"
       session[:mySections].each do |section|
         current_user.sections << Section.find(section)
       end
+      if session[:isStudent]
+        redirect_to student_index_path
+      else
+        redirect_to teacher_index_path
+      end
     end
 	
 	def index

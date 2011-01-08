@@ -12,13 +12,20 @@ Courses::Application.routes.draw do
   match 'auth/:provider/:callback' => 'Sessions#create'
 
   # CoursesDisplay Routes
-  match 'save_sections' => 'CoursesDisplay#save_sections', :as => :save_sections
+  match 'courses/save_sections' => 'CoursesDisplay#save_sections', :as => :save_sections
   match 'courses/remove_section/:section_id' => 'CoursesDisplay#remove_section', :as => :remove_section
   match 'courses/add_section/:section_id' => 'CoursesDisplay#add_section', :as => :add_section
   match 'courses/:major/:course' => 'CoursesDisplay#section', :as => :showSections
   match 'courses/:major' => 'CoursesDisplay#course', :as => :showCourses
   match 'courses/' => 'CoursesDisplay#index', :as => :courses
+
+
+  # Student Routes
+  match 'student/' => "Student#index", :as => :student_index
 	
+  # Teacher Routes
+  match 'teacher/' => "Teacher#index", :as => :teacher_index
+
   # Scraper Routes
 #  match 'scrape/:semester/:year' => 'CourseScraper#scrape'
 
