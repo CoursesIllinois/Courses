@@ -48,6 +48,8 @@ layout "coursesdisplay"
 	end
 
     def save_sections
+      # make sure the users sections are clear
+      current_user.sections = []
       session[:mySections].each do |section|
         current_user.sections << Section.find(section)
       end
