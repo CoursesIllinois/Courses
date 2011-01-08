@@ -48,8 +48,8 @@ layout "coursesdisplay"
 	end
 
     def save_sections
-      session[:section_id].each do |section|
-        #current_user.sections.create()
+      session[:mySections].each do |section|
+        current_user.sections << Section.find(section)
       end
     end
 	
