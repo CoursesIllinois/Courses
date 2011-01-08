@@ -46,6 +46,12 @@ layout "coursesdisplay"
 		  format.js
 	  end
 	end
+
+    def save_sections
+      session[:section_id].each do |section|
+        #current_user.sections.create()
+      end
+    end
 	
 	def index
 		@majors = Major.all
