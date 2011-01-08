@@ -3,6 +3,4 @@ class User < ActiveRecord::Base
   #TODO add deletion of relation/mapping from users_sections when a user is destroyed
   has_many :authorizations, :dependent => :destroy
   has_one :notify_pref, :dependent => :destroy
-  
-  validates :isStudent, :presence => true
 end
