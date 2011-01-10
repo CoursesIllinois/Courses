@@ -4,6 +4,7 @@ class TeacherController < ApplicationController
   end
 
   def createAnnouncement
+    Announcement.create( 
     redirect_to teacher_path
   end
 
