@@ -27,6 +27,9 @@ gem 'ruby-debug19'
 # For a more useful and cooler console
 gem 'wirble'
 
+# To use thin web server instead of Webrick
+gem 'thin'
+
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
