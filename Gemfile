@@ -10,6 +10,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # XML Parsing Gem
 gem 'xml-simple'
 
+# Enum Gem
+gem "symbolize"
+
 # Authentication Gem
 gem 'omniauth'
 gem 'oa-openid', :require => 'omniauth/openid'
