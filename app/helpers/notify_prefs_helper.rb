@@ -1,0 +1,2 @@
+module NotifyPrefsHelper
+end

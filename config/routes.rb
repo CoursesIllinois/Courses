@@ -6,7 +6,9 @@ Courses::Application.routes.draw do
   match 'login/student' => 'home#student', :as => :student_login
   match 'login/teacher' => 'home#teacher', :as => :teacher_login
 
-  resources :users
+  resources :users do
+    resources :notify_prefs
+  end
 
   # Authentication Routes
   match 'auth/:provider/:callback' => 'Sessions#create'
