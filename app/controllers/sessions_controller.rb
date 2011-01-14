@@ -27,7 +27,11 @@ skip_before_filter :authenticate
 
     self.current_user = @auth.user 
     #render :text => "Welcome, #{session['user_id']}, #{current_user.firstname}" 
-    redirect_to courses_path
+    if session['isStudent']
+      redirect_to courses_path
+    else
+      redirect_to teacher_index_path
+    end
   end
   
 end

@@ -1,0 +1,8 @@
+<%= form_tag(announce_path, :method => "get") do %>
+  <%= label_tag(:q, "Title") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Description") %>
+  <%= text_field_tag(:q) %>
+  <%= select_date Date.today, :prefix => :start_date %>
+  <%= submit_tag("Announce") %>
+<% end %>

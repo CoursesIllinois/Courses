@@ -27,6 +27,8 @@ Courses::Application.routes.draw do
 	
   # Teacher Routes
   match 'teacher/' => "Teacher#index", :as => :teacher_index
+  match 'teacher/announce' => "Teacher#announce", :as => :announce
+#  match 'teacher/announce/:type/:title/:description/:dueDate/' => "Teacher#announce", :as => :teacher_announce
 
   # Scraper Routes
 #  match 'scrape/:semester/:year' => 'CourseScraper#scrape'
