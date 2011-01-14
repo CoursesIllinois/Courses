@@ -5,8 +5,10 @@ class User < ActiveRecord::Base
     sections.each do |section|
       course = Course.find(section.course_id)
       course_name = course.subjectCode + " " + course.courseNumber.to_s
-      unless courses.include?({:name => course_name, :id => section.course_id})
-        courses << {:name => course_name, :id => section.course_id}
+#      unless courses.include?({:name => course_name, :id => section.course_id})
+#        courses << {:name => course_name, :id => section.course_id}
+      unless courses.include?([course_name, section.course_id])
+        courses << [course_name, section.course_id]
       end
     end
     return courses
