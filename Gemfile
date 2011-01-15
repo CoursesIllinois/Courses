@@ -11,7 +11,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'xml-simple'
 
 # Enum Gem
-gem "symbolize"
+# gem "symbolize"
 
 # Authentication Gem
 gem 'omniauth'

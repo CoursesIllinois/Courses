@@ -9,6 +9,8 @@ end
 
 def create 
 
+    logger.debug "start" 
+    logger.debug params.is_a?(Array)
     announceData = params[:announce]
     currentCourse = Course.find(announceData[:course_id])
     # Had to put in time manually

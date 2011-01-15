@@ -128,7 +128,6 @@ GEM
       archive-tar-minitar (>= 0.5.2)
     rubyntlm (0.1.1)
     sqlite3-ruby (1.3.2)
-    symbolize (3.0.2)
     thin (1.2.7)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -149,7 +148,6 @@ DEPENDENCIES
   rails (= 3.0.3)
   ruby-debug19
   sqlite3-ruby
-  symbolize
   thin
   wirble
   xml-simple
