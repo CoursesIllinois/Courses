@@ -25,13 +25,13 @@ class ApplicationController < ActionController::Base
 
   def redirect_to_home
     if @current_user.isStudent
-      redirect_to student_index
+      redirect_to student_index_path
     else
-      redirect_to teacher_index
+      redirect_to teacher_index_path
     end
   end
 
-  helper_method :current_user, :signed_in?, redirect_to_home
+  helper_method :current_user, :signed_in?, :redirect_to_home
 
   # Helper method to assign and set user in session
   def current_user=(user)
