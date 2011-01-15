@@ -8,10 +8,8 @@ def new
 end
 
 def create 
-    logger.debug "WHT THE FUCK"
+
     announceData = params[:announce]
-    logger.debug params
-    logger.debug announceData
     currentCourse = Course.find(announceData[:course_id])
     # Had to put in time manually
     dueData = params[:dueDate] 
@@ -22,20 +20,18 @@ def create
                 dueData[:hour].to_i,
                 dueData[:minute].to_i
               )
-  
-    logger.debug dueTime
-    logger.debug "WHT THE FUCK"
-
     @announcement = currentCourse.announcements.create(
                       :title => announceData[:title],
                       :description => announceData[:description],
                       :course_id => announceData[:course_id],
-                      :dueDate => dueTime
+                      :dueDate => dueTime,
+                      :type => announceData[:type]
                     )
 
     respond_to do |format|
+      # if we could make the announcement, redirect to the teacher homepage, otherwise fail
       if @announcement.save
-        format.html 
+        format.html { redirect_to(teacher_index_path, :notice => "Announcement created!") }
         format.xml  { render :xml => @announcement, :status => :created }
       else
         format.html { render :action => "new" }
