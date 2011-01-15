@@ -1,9 +1,0 @@
-<%= form_tag(announce_path, :method => "get") do |f|%>
-  <%= label_tag(:q, "Title") %>
-  <%= text_field_tag(:q) %><br />
-  <%= label_tag(:q, "Description") %>
-  <%= text_area_tag(:q) %><br />
-  Date <%= select_date Date.today, :prefix => :start_date %><br />
-  Course <%= select_tag(:course_id, options_for_select(current_user.courses)) %><br />
-  <%= submit_tag("Announce") %>
-<% end %>
