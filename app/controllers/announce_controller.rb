@@ -8,8 +8,30 @@ def new
 end
 
 def create 
-    currentCourse = Course.find(params[:announce][:course_id])
-    @announcement = currentCourse.announcements.create(params[:announce])
+    logger.debug "WHT THE FUCK"
+    announceData = params[:announce]
+    logger.debug params
+    logger.debug announceData
+    currentCourse = Course.find(announceData[:course_id])
+    # Had to put in time manually
+    dueData = params[:dueDate] 
+    dueTime = Time.new(
+                dueData[:year].to_i,
+                dueData[:month].to_i,
+                dueData[:day].to_i,
+                dueData[:hour].to_i,
+                dueData[:minute].to_i
+              )
+  
+    logger.debug dueTime
+    logger.debug "WHT THE FUCK"
+
+    @announcement = currentCourse.announcements.create(
+                      :title => announceData[:title],
+                      :description => announceData[:description],
+                      :course_id => announceData[:course_id],
+                      :dueDate => dueTime
+                    )
 
     respond_to do |format|
       if @announcement.save
