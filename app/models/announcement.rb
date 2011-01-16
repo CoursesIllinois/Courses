@@ -7,4 +7,7 @@ class Announcement < ActiveRecord::Base
 
   belongs_to :courses
   belongs_to :sections
+
+  validates :title, :presence => true
+  validates :atype, :presence => true
 end

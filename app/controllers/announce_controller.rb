@@ -14,6 +14,8 @@ def create
     date = params['date'] 
     time = params['time'] 
 
+    # TODO: Turn into shorthand for ease and better error handling
+
     if (date['year'] == "" or date['year'] == "" or date['year'] == "") 
       dueDate = nil
     else

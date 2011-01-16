@@ -1,4 +1,6 @@
 <%= form_for @announcement,:as => :announce,  :url => { :action => "create"} do |f| %>
+  <% announce_types = Announcement.types.map {|type| [type, type]} %>
+  Type <%= f.select(:atype, options_for_select(announce_types)) %><br />
   <%= f.label "title" %>
   <%= f.text_field :title %><br />
   <%= f.label "description" %><br />
@@ -6,7 +8,5 @@
   Date <%= select_date nil, :prefix => :date, :prompt => true %><br />
   Time <%= select_time nil, :prefix => :time, :prompt => true, :minute_step => 15 %><br />
   Course <%= f.select(:course_id, options_for_select(current_user.courses)) %><br />
-  <% announce_types = Announcement.types.map {|type| [type, type]} %>
-  Type <%= f.select(:atype, options_for_select(announce_types)) %><br />
   <%= f.submit "Announce" %>
 <% end %>
