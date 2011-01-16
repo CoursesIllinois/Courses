@@ -1,9 +1,12 @@
-<%= form_tag(announce_path, :method => "get") do |f|%>
-  <%= label_tag(:q, "Title") %>
-  <%= text_field_tag(:q) %><br />
-  <%= label_tag(:q, "Description") %>
-  <%= text_area_tag(:q) %><br />
-  Date <%= select_date Date.today, :prefix => :start_date %><br />
-  Course <%= select_tag(:course_id, options_for_select(current_user.courses)) %><br />
-  <%= submit_tag("Announce") %>
+<%= form_for @announcement,:as => :announce,  :url => { :action => "create"} do |f| %>
+  <%= f.label "title" %>
+  <%= f.text_field :title %><br />
+  <%= f.label "description" %><br />
+  <%= f.text_area :description %><br />
+  Date <%= select_date nil, :prefix => :date, :prompt => true %><br />
+  Time <%= select_time nil, :prefix => :time, :prompt => true, :minute_step => 15 %><br />
+  Course <%= f.select(:course_id, options_for_select(current_user.courses)) %><br />
+  <% announce_types = Announcement.types.map {|type| [type, type]} %>
+  Type <%= f.select(:atype, options_for_select(announce_types)) %><br />
+  <%= f.submit "Announce" %>
 <% end %>

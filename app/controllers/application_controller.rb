@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  # Retrieve the current user
+  # Retrieve the current user, set the user if not already
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])
   end
@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
+  # Redirect to the homepage of the user
   def redirect_to_home
     if @current_user.isStudent
       redirect_to student_index_path

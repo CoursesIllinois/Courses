@@ -8,20 +8,34 @@ def new
 end
 
 def create 
-
-    logger.debug "start" 
-    logger.debug params.is_a?(Array)
     announceData = params[:announce]
     currentCourse = Course.find(announceData[:course_id])
     # Had to put in time manually
-    dueData = params[:dueDate] 
-    dueTime = Time.new(
-                dueData[:year].to_i,
-                dueData[:month].to_i,
-                dueData[:day].to_i,
-                dueData[:hour].to_i,
-                dueData[:minute].to_i
-              )
+    date = params['date'] 
+    time = params['time'] 
+
+    if (date['year'] == "" or date['year'] == "" or date['year'] == "") 
+      dueDate = nil
+    else
+      dueDate = Date.new( date[:year].to_i, date[:month].to_i, date[:day].to_i)
+    end
+
+
+    if (time[:hour] == "" or time[:minute] == "")
+      dueTime = nil
+    else
+      dueTime = Time.new(
+                  date[:year].to_i,
+                  date[:month].to_i,
+                  date[:day].to_i,
+                  time[:hour].to_i,
+                  time[:minute].to_i
+                )
+    end
+
+    logger.debug "Time: #{dueTime}"
+    logger.debug "Date: #{dueDate}"
+=begin
     @announcement = currentCourse.announcements.create(
                       :title => announceData[:title],
                       :description => announceData[:description],
@@ -29,6 +43,14 @@ def create
                       :dueDate => dueTime,
                       :type => announceData[:type]
                     )
+=end
+    @announcement = Announcement.new
+    @announcement.title = announceData[:title]
+    @announcement.description = announceData[:description]
+    @announcement.course_id = announceData[:course_id]
+    @announcement.dueTime = dueTime
+    @announcement.dueDate = dueDate
+    @announcement.atype = announceData[:atype]
 
     respond_to do |format|
       # if we could make the announcement, redirect to the teacher homepage, otherwise fail
