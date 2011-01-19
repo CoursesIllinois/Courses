@@ -1,6 +1,5 @@
-
-		<% if session[:mySections] %>
-			<% session[:mySections].each do |section| %>
+		<% if @mySections %>
+			<% @mySections.each do |section| %>
 				<li>
 					<% course = Course.find(Section.find(section).course_id) %>
 					<%= link_to '-', remove_section_path(section), :remote => true, :id => "remove" %>

@@ -24,9 +24,10 @@ layout "coursesdisplay"
   
   def remove_section
     @mySections = users_sections
-    if( params[:section_id] == @mySections.delete(params[:section_id]))
+    if( params[:section_id].to_i == @mySections.delete(params[:section_id].to_i))
         flash['notice'] = "Section "+ params[:section_id] + " removed!"
     end
+    logger.debug "MySections: #{session[:mySections]}"
     respond_to do |format|
       format.js
     end
@@ -44,7 +45,7 @@ layout "coursesdisplay"
 		@course = @major.courses.find(:first, :conditions => {:courseNumber => params[:course]})
 		respond_to do |format|
 		  format.js
-	  end
+        end
 	end
 
     def save_sections
@@ -62,6 +63,12 @@ layout "coursesdisplay"
 	
 	def index
 		@majors = Major.all
+        unless session[:mySections]
+          session[:mySections] = []
+          current_user.sections.each do |section|
+            session[:mySections] << section.id.to_i
+          end
+        end
+        @mySections = session[:mySections]
 	end
-	
 end
