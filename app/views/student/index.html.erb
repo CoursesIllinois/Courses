@@ -4,3 +4,15 @@
   <li><%= course[0] %></li>
 <% end %>
 </ul>
+
+<div id="news-feed"><h1>New's Feed</h1>
+    <% current_user.courses.each do |course| %>
+      <% announcements = Course.find(course[1]).announcements %>
+      <% if announcements %>
+          <% announcements.each do |announcement| %> 
+            <%= announcement.title %><br />
+            <%= announcement.description %>
+          <% end %>
+      <% end %>
+    <% end %>
+</div>

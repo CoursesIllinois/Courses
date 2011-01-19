@@ -9,10 +9,21 @@
 	font-style: normal;
 	list-style-type: none;
 }
+
+
+
 html{
 }
 
 body{
+    color: #cccccc;
+}
+
+a {
+  color: #cccc00;
+}
+a:hover {
+  color: #00cc00;
 }
 
 #google-sso{
