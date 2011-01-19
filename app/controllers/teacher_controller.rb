@@ -1,4 +1,11 @@
 class TeacherController < ApplicationController
+  before_filter :isTeacher
+  
+  def isTeacher
+    if current_user.isStudent
+      redirect_to "/"
+    end
+  end
   
   def index
   end
