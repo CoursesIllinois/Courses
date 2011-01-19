@@ -154,6 +154,13 @@ li a{
 	border-radius: 10px;
 }
 
+#myCourses a {
+    color: white;
+    background: green;
+    padding: 4px;
+    margin-left: 48px;
+}
+
 #myCourses-header {
     background: #626262;
     text-align: center;
