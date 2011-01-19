@@ -16,7 +16,7 @@ layout "coursesdisplay"
 
   def add_section
     @mySections = users_sections
-    @mySections << params[:section_id]
+    @mySections << params[:section_id].to_i
     respond_to {|format| format.js}
     flash['notice'] = "Section " + params[:section_id] + " Added!"
     #redirect_to '/courses/'
