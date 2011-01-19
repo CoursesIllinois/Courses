@@ -157,7 +157,6 @@ li a{
 
 #myCourses a {
     color: white;
-    background: green;
     padding: 4px;
     margin-left: 48px;
 }
@@ -187,7 +186,7 @@ li a{
     display: table;
 }
 span.course {
-	
+  color: #333333;	
     background: none repeat scroll 0 0 #c4c4c4;
     vertical-align: middle;
     display: table-cell;
@@ -196,6 +195,7 @@ span.course {
     padding: 5px;
 }
 span.section {
+  color: #333333;	
     background: none repeat scroll 0 0 orange;
     padding: 5px;
     vertical-align: middle;
