@@ -37,4 +37,10 @@ skip_before_filter :authenticate
 =end
   end
   
+
+  def fail
+    flash['notice'] = "Authentication failed"
+    redirect_to welcome_path
+  end
+
 end
