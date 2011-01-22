@@ -19,10 +19,11 @@ This command installs all the dependencies needed for the application.
     rake db:setup
 
 ## Server ##
-Using thin server because webbrick messes up with omniauth
+### Installing ###
     sudo gem install thin
+We're using the thin server because we get a URI too large error with the default Webrick server
 
-## Running ##
+### Running ###
     thin start
 or
     screen thin start
