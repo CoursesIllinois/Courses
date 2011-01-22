@@ -37,15 +37,7 @@ def create
 
     logger.debug "Time: #{dueTime}"
     logger.debug "Date: #{dueDate}"
-=begin
-    @announcement = currentCourse.announcements.create(
-                      :title => announceData[:title],
-                      :description => announceData[:description],
-                      :course_id => announceData[:course_id],
-                      :dueDate => dueTime,
-                      :type => announceData[:type]
-                    )
-=end
+
     @announcement = Announcement.new
     @announcement.title = announceData[:title]
     @announcement.description = announceData[:description]
@@ -54,6 +46,8 @@ def create
     @announcement.dueDate = dueDate
     @announcement.atype = announceData[:atype]
 
+    send_notifications(announceData[:course_id], @announcement)
+    
     respond_to do |format|
       # if we could make the announcement, redirect to the teacher homepage, otherwise fail
       if @announcement.save
@@ -67,6 +61,18 @@ def create
 end
 
 def show
+end
+
+def send_notifications(course_id, announcement)
+  logger.debug "PARAMS: #{announcement} - #{course_id}" 
+  course = Course.find(course_id)
+  course.sections.each do |section|
+    section.users.each do |user|
+      if user.phone
+        logger.debug "Sending text to: #{user.phone}"
+      end
+    end
+  end
 end
 
 end
