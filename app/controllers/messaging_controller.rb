@@ -1,4 +1,9 @@
 class MessagingController < ApplicationController
+
+	require 'uri'
+	require 'net/http'
+	require 'tropo-webapi-ruby'
+
   skip_before_filter :authenticate
 
   # This function takes in message text and contact from tropo's get request
