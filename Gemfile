@@ -17,6 +17,9 @@ gem 'xml-simple'
 gem 'omniauth'
 gem 'oa-openid', :require => 'omniauth/openid'
 
+# Tropo for Message communication
+gem 'tropo-webapi-ruby'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
