@@ -23,6 +23,8 @@ We're using the thin server because we get a URI too large error with the defaul
     sudo gem install thin
 
 ### Running ###
+    rails server thin
+or
     thin start
 or
     screen thin start
