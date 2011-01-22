@@ -51,6 +51,7 @@ layout "coursesdisplay"
     def save_sections
       # make sure the users sections are clear
       current_user.sections = []
+      current_user.courses = []
 
       courses = []
       session[:mySections].each do |section|
