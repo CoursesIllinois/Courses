@@ -10,11 +10,11 @@ This command installs all the dependencies needed for the application.
 ## Building database ##
 
     rake db:migrate
-* Make sure schema is updated (all migrations are done), and then execute rake db:seed to seed the database with spring 2011 course data
+ Make sure schema is updated (all migrations are done), and then execute rake db:seed to seed the database with spring 2011 course data
 
     rake db:seed
 
-* Alternately, you can just run rake db:setup to setup the entire database (and make sure migrated to latest version of schema)
+ Alternately, you can just run rake db:setup to setup the entire database (and make sure migrated to latest version of schema)
 
     rake db:setup
 
