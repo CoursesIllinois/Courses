@@ -1,5 +1,4 @@
 # Getting Started #
-
 ## Stuff to install ##
 Once in the directory, run
     bundle install
@@ -19,9 +18,9 @@ This command installs all the dependencies needed for the application.
     rake db:setup
 
 ## Server ##
+We're using the thin server because we get a URI too large error with the default Webrick server
 ### Installing ###
     sudo gem install thin
-We're using the thin server because we get a URI too large error with the default Webrick server
 
 ### Running ###
     thin start
