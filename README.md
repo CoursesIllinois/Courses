@@ -1,5 +1,5 @@
 # Getting Started #
-## Stuff to install ##
+## Dependencies ##
 Once in the directory, run
     bundle install
 This command installs all the dependencies needed for the application.
