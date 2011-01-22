@@ -1,5 +1,4 @@
 # Getting Started #
-=================
 
 ## Stuff to install ##
 Once in the directory, run 'bundle install'
