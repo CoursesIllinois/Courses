@@ -51,8 +51,15 @@ layout "coursesdisplay"
     def save_sections
       # make sure the users sections are clear
       current_user.sections = []
+
+      courses = []
       session[:mySections].each do |section|
-        current_user.sections << Section.find(section)
+        currentSection = Section.find(section)
+        current_user.sections << currentSection 
+        unless courses.include?(currentSection.course_id)
+          current_user.courses << Course.find(currentSection.course_id)
+          courses << currentSection.course_id
+        end
       end
       if session[:isStudent]
         redirect_to student_index_path
