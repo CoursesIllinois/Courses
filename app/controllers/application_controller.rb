@@ -1,4 +1,9 @@
 class ApplicationController < ActionController::Base
+
+  # Keys for tropo api calls
+  @@messaging_token = "1bfbc049ce83714697a6d23c43e584f10447935ec48b23414e6162b9cb808d84cec845ea4bac4ca2a24c818c"
+  @@api_url = 'http://api.tropo.com/1.0/sessions?action=create&token=' + @@messaging_token
+
   before_filter :authenticate
 
   def authenticate 
@@ -7,6 +12,12 @@ class ApplicationController < ActionController::Base
       redirect_to welcome_path  
       flash['notice'] = "You need to be signed in to do that!"
     end
+  end
+
+  def send_text(phone, message)
+    message = URI.escape(message, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+    api_call = @@api_url + "&contactNumber=" + phone + "&msg=" + message
+    Net::HTTP.get URI.parse(api_call)
   end
 
   protect_from_forgery

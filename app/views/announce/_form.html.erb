@@ -7,6 +7,6 @@
   <%= f.text_area :description %><br />
   Date <%= select_date nil, :prefix => :date, :prompt => true %><br />
   Time <%= select_time nil, :prefix => :time, :prompt => true, :minute_step => 15 %><br />
-  Course <%= f.select(:course_id, options_for_select(current_user.courses)) %><br />
+  Course <%= f.select(:course_id, options_for_select(current_user.courses_form_data)) %><br />
   <%= f.submit "Announce" %>
 <% end %>

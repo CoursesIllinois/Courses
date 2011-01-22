@@ -1,5 +1,4 @@
 # Getting Started #
-=================
 
 ## Stuff to install ##
 Once in the directory, run 'bundle install'
@@ -18,8 +17,6 @@ Using thin server because webbrick messes up with omniauth
 
 ## Running ##
     thin start
-or
-    rails server thin
 or
     screen thin start
 	(ctrl+a, d) to get out of the screen. (screen -r to resume)

@@ -1,6 +1,7 @@
 Courses::Application.routes.draw do
 
   root :to => 'Home#index', :as => :welcome
+
   
   # Login button routes
   match 'login/student' => 'home#student', :as => :student_login
@@ -12,6 +13,7 @@ Courses::Application.routes.draw do
 
   # Authentication Routes
   match 'auth/:provider/:callback' => 'Sessions#create'
+  match 'auth/failure' => "Sessions#fail"
 
   # CoursesDisplay Routes
   match 'courses/save_sections' => 'CoursesDisplay#save_sections', :as => :save_sections
@@ -27,6 +29,8 @@ Courses::Application.routes.draw do
 	
   # Teacher Routes
   match 'teacher/' => "Teacher#index", :as => :teacher_index
+
+  match 'messaging' => "Messaging#index"
   resources :announce
 #  match 'teacher/announce/:type/:title/:description/:dueDate/' => "Teacher#announce", :as => :teacher_announce
 
