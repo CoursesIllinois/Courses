@@ -29,6 +29,8 @@ Courses::Application.routes.draw do
 	
   # Teacher Routes
   match 'teacher/' => "Teacher#index", :as => :teacher_index
+
+  match 'messaging' => "Messaging#index"
   resources :announce
 #  match 'teacher/announce/:type/:title/:description/:dueDate/' => "Teacher#announce", :as => :teacher_announce
 
