@@ -72,14 +72,15 @@ end
 #	 	@params course_id = Course id of the course that needs notifications sent to it
 #	    @params announcement =  Announcement object to be broadcast to all users
 def send_notifications(course_id, announcement)
-  logger.debug "PARAMS: #{announcement} - #{course_id}" 
   course = Course.find(course_id)
 	message = "(#{course.subjectCode}-#{course.courseNumber}) New #{announcement.atype} Posted: #{announcement.title} is Due On #{announcement.dueDate}"
 	logger.debug message
+	
+	# Iterate through the users courses and send them the message
   course.users.each do |user|
     if user.phone and user.isStudent
       logger.debug "Sending text to: #{user.phone}"
-		send_text(user.phone, message)
+			send_text(user.phone, message)
     end
   end
 end
