@@ -3,16 +3,20 @@
 		%ul#nav
 			%li Dashboard
 			%li Mail 
-			%li Groups
 			%li Questions
+			%li Groups
 
 		%ul#classes
-			- current_user.courses.each do |course|
-				%li= course.subjectCode + " " + course.courseNumber.to_s
+			%li= link_to "Classes", courses_path 
+			#dropdown
+				- current_user.courses.each do |course|
+					%li= course.subjectCode + " " + course.courseNumber.to_s
+
+		#search-bar
+			%input{:type => 'text'}
 
 		%ul#user-info
 			%li= current_user.firstname
-			%li= link_to "Add your classes", courses_path 
 			%li Settings
 
 	#content
