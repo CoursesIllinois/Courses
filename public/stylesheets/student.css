@@ -1,3 +1,28 @@
-#nav {
-	background: red;
+#header {
+    background: none repeat scroll 0 0 red;
+}
+
+#header li{
+	display: inline;
+}
+#header ul{
+	float: left;
+	margin: 20px;
+}
+
+#wrapper {
+    width:  960px;
+    margin: 0 auto;
+}
+.column {
+    width: 31.33333%;
+    min-height: 500px;
+    background: orange;
+    width: 31.33333333%;
+    margin: 0 1%;
+    float: left;
+}
+#content {
+    background: blue;
+    overflow: hidden;
 }
