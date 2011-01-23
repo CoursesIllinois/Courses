@@ -19,7 +19,7 @@ class MessagingController < ApplicationController
   end
 
   def test
-    render :xml => send_text("16097851404", "This is an example of a message");
+    render :json => send_text("16097851404", "This is an example of a message");
   end
 
 end

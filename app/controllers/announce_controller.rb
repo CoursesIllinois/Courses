@@ -74,9 +74,12 @@ end
 def send_notifications(course_id, announcement)
   logger.debug "PARAMS: #{announcement} - #{course_id}" 
   course = Course.find(course_id)
+	message = "(#{course.subjectCode}-#{course.courseNumber}) New #{announcement.atype} Posted: #{announcement.title} is Due On #{announcement.dueDate}"
+	logger.debug message
   course.users.each do |user|
     if user.phone
       logger.debug "Sending text to: #{user.phone}"
+		send_text(user.phone, message)
     end
   end
 end
