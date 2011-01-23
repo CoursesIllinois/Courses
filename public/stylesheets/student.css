@@ -1,32 +1,73 @@
 #header {
-    background: none repeat scroll 0 0 red;
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #CCCCCC;
+    font-family: arial,sans-serif;
+    font-size: 0.75em;
+    padding: 10px;
+    text-transform: uppercase;
 }
-
-#header li{
-	display: inline;
+#header ul {
 }
-#header ul{
-	float: left;
-	margin: 20px;
+#header li a {
+    display: block;
+    padding: 10px 12px;
 }
-
-#wrapper {
-    width:  960px;
-    margin: 0 auto;
+#header a:hover {
+    text-decoration: underline;
 }
-.column {
-    width: 31.33333%;
-    min-height: 500px;
-    background: orange;
-    width: 31.33333333%;
-    margin: 0 1%;
+#header li {
+    background: none repeat scroll 0 0 #CCCCCC;
+    display: inline;
+    float: left;
+    margin: 0 4px;
+    border: 1px solid #aaaaaa;
+}
+#user-info {
+    float: right;
+}
+#classes {
     float: left;
 }
-#dropdown{
-	display: none;
+#nav li {
 }
-
-#content {
-    background: blue;
+#header li:hover {
+    background: none repeat scroll 0 0 #FFF5C1;
+}
+#nav {
+    float: left;
     overflow: hidden;
+    width: 57%;
+}
+#user-info li {
+    float: right;
+    text-transform: none;
+}
+#wrapper {
+    margin: 0 auto;
+    width: 954px;
+}
+.column {
+    background: none repeat scroll 0 0 orange;
+    float: left;
+    margin: 0 1%;
+    min-height: 500px;
+    width: 31.3333%;
+}
+#dropdown {
+    display: none;
+}
+input[name="searchbar"] {
+    border: 1px solid #AAAAAA;
+    margin: 0.55%;
+    padding: 3px;
+    width: 20%;
+}
+#content {
+    background: none repeat scroll 0 0 blue;
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 1% 0;
+}
+body {
+    background: none repeat scroll 0 0 #DFE7E9;
 }

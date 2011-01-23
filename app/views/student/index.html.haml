@@ -1,23 +1,24 @@
 #wrapper
 	#header
 		%ul#nav
-			%li Dashboard
-			%li Mail 
-			%li Questions
-			%li Groups
+			%li
+				%a{:href => '#' } Dashboard
+			%li
+				%a{:href => '#' } Mail
+			%li
+				%a{:href => '#' } Questions
+			%li
+				%a{:href => '#' } Groups 
+			%li 
+				%a{:href => '#' } Courses
 
-		%ul#classes
-			%li= link_to "Classes", courses_path 
-			#dropdown
-				- current_user.courses.each do |course|
-					%li= course.subjectCode + " " + course.courseNumber.to_s
-
-		#search-bar
-			%input{:type => 'text'}
+		%input{:type => 'text', :name => 'searchbar', :value => 'Search'}
 
 		%ul#user-info
-			%li= current_user.firstname
-			%li Settings
+			%li
+				%a{:href => '#' }= current_user.firstname
+			%li
+				%a{:href => '#' } Settings
 
 	#content
 		#left.column

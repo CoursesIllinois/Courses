@@ -20,10 +20,10 @@ body{
 }
 
 a {
-  color: #cccc00;
+  color: #333333;
 }
 a:hover {
-  color: #00cc00;
+  color: #555555;
 }
 
 #google-sso{
