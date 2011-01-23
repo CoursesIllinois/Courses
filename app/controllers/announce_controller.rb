@@ -77,7 +77,7 @@ def send_notifications(course_id, announcement)
 	message = "(#{course.subjectCode}-#{course.courseNumber}) New #{announcement.atype} Posted: #{announcement.title} is Due On #{announcement.dueDate}"
 	logger.debug message
   course.users.each do |user|
-    if user.phone
+    if user.phone and user.isStudent
       logger.debug "Sending text to: #{user.phone}"
 		send_text(user.phone, message)
     end
