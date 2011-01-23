@@ -1,5 +1,8 @@
 Courses::Application.routes.draw do
 
+  #  Temporary routes for testing
+  match 'test' => "Messaging#test"
+
   root :to => 'Home#index', :as => :welcome
 
   
