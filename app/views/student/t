@@ -1,0 +1,6 @@
+<%= link_to "Add your classes", courses_path %><br />
+<ul>
+<% current_user.courses.each do |course|%>
+  <li><%= course %></li>
+<% end %>
+</ul>

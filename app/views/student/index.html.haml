@@ -1,4 +1,22 @@
-= link_to "Add your classes", courses_path 
-%ul
-  - current_user.courses.each do |course|
-  %li= course
+#wrapper
+	#header
+		%ul#nav
+			%li Dashboard
+			%li Mail 
+			%li Groups
+			%li Questions
+
+		%ul#classes
+			- current_user.courses.each do |course|
+				%li= course.subjectCode + " " + course.courseNumber.to_s
+
+		%ul#user-info
+			%li= current_user.firstname
+			%li= link_to "Add your classes", courses_path 
+			%li Settings
+
+	#content
+		#left.column
+		#middle.column
+		#right.column
+	#footer
