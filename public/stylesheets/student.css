@@ -51,12 +51,15 @@
     margin: 0 auto;
     width: 954px;
 }
+#middle {
+    margin: 0 2%;
+}
 .column {
-    background: none repeat scroll 0 0 orange;
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #AAAAAA;
     float: left;
-    margin: 0 1%;
-    min-height: 500px;
-    width: 31.3333%;
+    min-height: 160px;
+    width: 31.78%;
 }
 #dropdown {
     display: none;
@@ -67,9 +70,7 @@ input[name="searchbar"] {
     padding: 3px;
     width: 20%;
 }
-#content {
-    background: none repeat scroll 0 0 blue;
-    margin-top: 10px;
+#header2 {
     overflow: hidden;
     padding: 1% 0;
 }
@@ -81,8 +82,38 @@ body {
     border-top: medium none;
     color: white;
 }
-.active {
+#header li a.active {
     background: -moz-linear-gradient(center bottom , #2F64A1 10%, #2F64A1 90%) repeat scroll 0 0 transparent;
     border-top: medium none;
     color: white;
+}
+#header2 li a {
+    padding: 5px;
+}
+#header2 #header li a {
+    border-top: 1px solid #777777;
+}
+#header2 #header {
+    margin: 0;
+    padding: 5px;
+}
+#header2 #header li {
+    background: -moz-linear-gradient(center bottom , #999999 10%, #CCCCCC 90%) repeat scroll 0 0 transparent;
+    border: 1px solid #222222;
+}
+#header2 #header li a {
+    color: white;
+    font-size: 1.2em;
+    text-shadow: 0 1px 2px black;
+}
+#header2 #header {
+    background: -moz-linear-gradient(center bottom , #666666 10%, #888888 90%) repeat scroll 0 0 transparent;
+}
+#header2 #nav li {
+    margin: 0 auto;
+    text-align: center;
+    width: 99.4%;
+}
+#header2 #nav {
+    width: 100%;
 }

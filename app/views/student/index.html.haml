@@ -2,13 +2,7 @@
 	#header
 		%ul#nav
 			%li
-				%a{:href => '#' } Dashboard
-			%li
-				%a{:href => '#' } Mail
-			%li
-				%a{:href => '#' } Questions
-			%li
-				%a{:href => '#' } Groups 
+				%a{:href => '#' , :class => 'active'} Dashboard
 			%li 
 				= link_to "Courses", courses_path
 
@@ -20,8 +14,21 @@
 			%li
 				%a{:href => '#' } Settings
 
-	#content
+	#header2
 		#left.column
+			#header
+				%ul#nav
+					%li
+						%a{:href => "#"} To Do
 		#middle.column
+			#header
+				%ul#nav
+					%li
+						%a{:href => "#"} Messages
 		#right.column
+			#header
+				%ul#nav
+					%li
+						%a{:href => "#"} Questions
+	#content
 	#footer
