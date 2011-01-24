@@ -1,42 +1,31 @@
 #header {
-    background: none repeat scroll 0 0 white;
-    border: 1px solid #AAAAAA;
+    background: -moz-linear-gradient(center bottom , #1C4779 10%, #2964A8 90%) repeat scroll 0 0 white;
+    border: 1px solid #0C366B;
     font-family: arial,sans-serif;
     font-size: 0.75em;
+    margin-top: 10px;
     padding: 10px;
     text-transform: uppercase;
-		background-image: -webkit-gradient(
-				linear,
-				left bottom,
-				left top,
-				color-stop(0.21, rgb(219,219,219)),
-				color-stop(0.85, rgb(255,255,255))
-		);
-		background-image: -moz-linear-gradient(
-				center bottom,
-				rgb(239,239,239) 21%,
-				rgb(255,255,255) 85%
-		);
-
 }
 #header ul {
 }
 #header li a {
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-top: 1px solid #2E89FF;
+    color: #EFEFEF;
     display: block;
     padding: 10px 12px;
 }
 #header a:hover {
-    text-decoration: underline;
 }
 #header li {
-    background: none repeat scroll 0 0 #DDDDDD;
-		border-radius: 5px;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -moz-box-shadow: 0 1px 1px #637B9A;
+    background: -moz-linear-gradient(center bottom , #2F64A1 10%, #3783E4 90%) repeat scroll 0 0 transparent;
+    border: 1px solid #0C366B;
     display: inline;
     float: left;
-    margin: 0 4px;
-    border: 1px solid #aaaaaa;
+    margin: 2px 4px;
 }
 #user-info {
     float: right;
@@ -47,7 +36,7 @@
 #nav li {
 }
 #header li:hover {
-    background: none repeat scroll 0 0 #FFF5C1;
+    background: -moz-linear-gradient(center bottom , #2F64A1 10%, #3783E4 70%) repeat scroll 0 0 transparent;
 }
 #nav {
     float: left;
@@ -73,7 +62,7 @@
     display: none;
 }
 input[name="searchbar"] {
-    border: 1px solid #AAAAAA;
+    border: 1px solid #0C366B;
     margin: 0.55%;
     padding: 3px;
     width: 20%;
@@ -86,4 +75,14 @@ input[name="searchbar"] {
 }
 body {
     background: none repeat scroll 0 0 #DFE7E9;
+}
+#header li a:active {
+    background: -moz-linear-gradient(center bottom , #2F64A1 10%, #2F64A1 90%) repeat scroll 0 0 transparent;
+    border-top: medium none;
+    color: white;
+}
+.active {
+    background: -moz-linear-gradient(center bottom , #2F64A1 10%, #2F64A1 90%) repeat scroll 0 0 transparent;
+    border-top: medium none;
+    color: white;
 }
