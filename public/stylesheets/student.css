@@ -117,3 +117,24 @@ body {
 #header2 #nav {
     width: 100%;
 }
+#content {
+    margin-top: 10px;
+}
+#content #right {
+    min-height: 400px;
+    width: 59.58%;
+    background: white;
+    display: block;
+    float: left;
+    border: 1px solid #AAAAAA;
+}
+#content #left {
+    min-height: 400px;
+    width: 38%;
+    background: white;
+    margin-right: 2%;
+    display: block;
+    float: left;
+    border: 1px solid #aaaaaa;
+}
+
