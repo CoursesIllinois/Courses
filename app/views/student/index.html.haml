@@ -9,8 +9,7 @@
 		%input{:type => 'text', :name => 'searchbar', :value => 'Search'}
 
 		%ul#user-info
-			%li
-				%a{:href => '#' }= current_user.firstname
+			%li= link_to current_user.firstname, current_user
 			%li
 				%a{:href => '#' } Settings
 
@@ -38,9 +37,21 @@
 						%li
 							%a{:href => "#"} Calendar
 		#right.column2
-			#header2
-				#header
-					%ul#nav
-						%li
-							%a{:href => "#"} News Feed
+			%h1
+				%a{:href => "#"} News Feed
+			%ul.tabbar
+				%li ALL
+				%li CS 105
+				%li MATH 241
+			#news-feed
+				%ul
+					%li
+						#news-post
+							%h1 CS105
+							%h2 Homework #3 is posted
+							%p Chapter 2, #1-15 odd. This homework requires a great deal of time so make sure you plan accordingly. Chapter 2 of your text book can be very helpful to you.
+							#news-details
+								%span.datePosted 4 Hours ago
+								%span.atype Homework
+								%a{:href => "#"} Ask a question
 	#footer
