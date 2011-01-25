@@ -17,7 +17,11 @@ skip_before_filter :authenticate
     # Check and see if the authorization exists
     unless @auth = Authorization.find_by_provider_and_uid(provider, provider_uid)
       # If the authorization doesn't exist, this must be a new user
-      user = User.create(:isStudent => session['isStudent'], :firstname => user_info['first_name'], :lastname => user_info['last_name'], :email => user_info['email']) 
+      user = User.create(:isStudent => session['isStudent'], :firstname => user_info['first_name'], :lastname => user_info['last_name'], :email => user_info['email'], :notify_pref_attributes => {}) 
+
+      if user.errors.any?
+        logger.debug "Error creating user: #{user.errors}"
+      end
     
       logger.debug "Creating a new user and authorization"
       #user = User.create(:isStudent => isStudent )

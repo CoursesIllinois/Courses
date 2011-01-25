@@ -11,7 +11,7 @@ Courses::Application.routes.draw do
   match 'login/teacher' => 'home#teacher', :as => :teacher_login
 
   resources :users do
-    resources :notify_prefs
+    resources :notify_pref
   end
 
   # Authentication Routes
