@@ -1,0 +1,29 @@
+<% form_for notify_pref do |f| %>
+  <% if notify_pref.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(notify_pref.errors.count, "error") %> prohibited these preferences from being saved:
+    <ul>
+      <% notify_pref.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.check_box :email %>
+  </div>
+  <div class="field">
+    <%= f.label :text %>
+    <%= f.check_box :text %>
+  </div>
+  <div class="field">
+    <%= f.label :android %>
+    <%= f.check_box :android %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

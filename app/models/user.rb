@@ -12,10 +12,13 @@ class User < ActiveRecord::Base
     return courses
   end
 
+  #TODO add deletion of relation/mapping from users_sections when a user is destroyed
   has_and_belongs_to_many :sections
   has_and_belongs_to_many :courses
 
-  #TODO add deletion of relation/mapping from users_sections when a user is destroyed
   has_many :authorizations, :dependent => :destroy
   has_one :notify_pref, :dependent => :destroy
+  accepts_nested_attributes_for :notify_pref
+
+  validates_presence_of :notify_pref
 end
