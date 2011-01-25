@@ -81,8 +81,6 @@ body {
     background: -moz-linear-gradient(center bottom , #2F64A1 10%, #2F64A1 90%) repeat scroll 0 0 transparent;
     border-top: medium none;
     color: white;
-}
-#header li a.active {
     background: -moz-linear-gradient(center bottom , #2F64A1 10%, #2F64A1 90%) repeat scroll 0 0 transparent;
     border-top: medium none;
     color: white;
@@ -102,9 +100,9 @@ body {
     border: 1px solid #222222;
 }
 #header2 #header li a {
-    color: white;
+    color: black;
     font-size: 1.2em;
-    text-shadow: 0 1px 2px black;
+/*    text-shadow: 0 1px 2px black; */
 }
 #header2 #header {
     background: -moz-linear-gradient(center bottom , #666666 10%, #888888 90%) repeat scroll 0 0 transparent;
@@ -120,6 +118,11 @@ body {
 #content {
     margin-top: 10px;
 }
+
+#content #header2{
+	padding: 0px;
+}
+
 #content #right {
     min-height: 400px;
     width: 59.58%;
