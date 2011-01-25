@@ -25,7 +25,5 @@ We're using the thin server because we get a URI too large error with the defaul
 ### Running ###
     rails server thin
 or
-    thin start
-or
-    screen thin start
+    screen rails server thin
 	(ctrl+a, d) to get out of the screen. (screen -r to resume)
