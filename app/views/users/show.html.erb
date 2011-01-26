@@ -2,7 +2,7 @@
 
 <p>
   <b>Name:</b>
-  <%= @user.name %>
+  <%= "#{@user.firstname} #{@user.lastname}" %>
 </p>
 
 <p>
@@ -20,6 +20,23 @@
   <%= @user.isStudent %>
 </p>
 
+<p>
+  <b>Notification Preferences:</b>
+  <table>
+    <tr>
+      <td>Use email:</td>
+      <td><%= @user.notify_pref.email %></td>
+    </tr>
+    <tr>
+      <td>Use text:</td>
+      <td><%= @user.notify_pref.text %></td>
+    </tr>
+    <tr>
+      <td>Use Android app:</td>
+      <td><%= @user.notify_pref.android %></td>
+    </tr>
+  </table>
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

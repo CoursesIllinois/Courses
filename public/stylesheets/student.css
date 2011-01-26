@@ -1,0 +1,143 @@
+#header {
+    background: -moz-linear-gradient(center bottom , #1C4779 10%, #2964A8 90%) repeat scroll 0 0 white;
+    border: 1px solid #0C366B;
+    font-family: arial,sans-serif;
+    font-size: 0.75em;
+    margin-top: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+#header ul {
+}
+#header li a {
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-top: 1px solid #2E89FF;
+    color: #EFEFEF;
+    display: block;
+    padding: 10px 12px;
+}
+#header a:hover {
+}
+#header li {
+    -moz-border-radius: 5px 5px 5px 5px;
+    -moz-box-shadow: 0 1px 1px #637B9A;
+    background: -moz-linear-gradient(center bottom , #2F64A1 10%, #3783E4 90%) repeat scroll 0 0 transparent;
+    border: 1px solid #0C366B;
+    display: inline;
+    float: left;
+    margin: 2px 4px;
+}
+#user-info {
+    float: right;
+}
+#classes {
+    float: left;
+}
+#nav li {
+}
+#header li:hover {
+    background: -moz-linear-gradient(center bottom , #2F64A1 10%, #3783E4 70%) repeat scroll 0 0 transparent;
+}
+#nav {
+    float: left;
+    overflow: hidden;
+    width: 57%;
+}
+#user-info li {
+    float: right;
+    text-transform: none;
+}
+#wrapper {
+    margin: 0 auto;
+    width: 954px;
+}
+#middle {
+    margin: 0 2%;
+}
+.column {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #AAAAAA;
+    float: left;
+    min-height: 160px;
+    width: 31.78%;
+}
+#dropdown {
+    display: none;
+}
+input[name="searchbar"] {
+    border: 1px solid #0C366B;
+    margin: 0.55%;
+    padding: 3px;
+    width: 20%;
+}
+#header2 {
+    overflow: hidden;
+    padding: 1% 0;
+}
+body {
+    background: none repeat scroll 0 0 #DFE7E9;
+}
+#header li a:active {
+    background: -moz-linear-gradient(center bottom , #2F64A1 10%, #2F64A1 90%) repeat scroll 0 0 transparent;
+    border-top: medium none;
+    color: white;
+    background: -moz-linear-gradient(center bottom , #2F64A1 10%, #2F64A1 90%) repeat scroll 0 0 transparent;
+    border-top: medium none;
+    color: white;
+}
+#header2 li a {
+    padding: 5px;
+}
+#header2 #header li a {
+    border-top: 1px solid #777777;
+}
+#header2 #header {
+    margin: 0;
+    padding: 5px;
+}
+#header2 #header li {
+    background: -moz-linear-gradient(center bottom , #999999 10%, #CCCCCC 90%) repeat scroll 0 0 transparent;
+    border: 1px solid #222222;
+}
+#header2 #header li a {
+    color: black;
+    font-size: 1.2em;
+/*    text-shadow: 0 1px 2px black; */
+}
+#header2 #header {
+    background: -moz-linear-gradient(center bottom , #666666 10%, #888888 90%) repeat scroll 0 0 transparent;
+}
+#header2 #nav li {
+    margin: 0 auto;
+    text-align: center;
+    width: 99.4%;
+}
+#header2 #nav {
+    width: 100%;
+}
+#content {
+    margin-top: 10px;
+}
+
+#content #header2{
+	padding: 0px;
+}
+
+#content #right {
+    min-height: 400px;
+    width: 59.58%;
+    background: white;
+    display: block;
+    float: left;
+    border: 1px solid #AAAAAA;
+}
+#content #left {
+    min-height: 400px;
+    width: 38%;
+    background: white;
+    margin-right: 2%;
+    display: block;
+    float: left;
+    border: 1px solid #aaaaaa;
+}
+

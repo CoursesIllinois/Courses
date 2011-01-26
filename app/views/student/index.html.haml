@@ -1,4 +1,57 @@
-= link_to "Add your classes", courses_path 
-%ul
-  - current_user.courses.each do |course|
-  %li= course
+#wrapper
+	#header
+		%ul#nav
+			%li
+				%a{:href => '#' , :class => 'active'} Dashboard
+			%li 
+				= link_to "Courses", courses_path
+
+		%input{:type => 'text', :name => 'searchbar', :value => 'Search'}
+
+		%ul#user-info
+			%li= link_to current_user.firstname, current_user
+			%li
+				%a{:href => '#' } Settings
+
+	#header2
+		#left.column
+			#header
+				%ul#nav
+					%li
+						%a{:href => "#"} To Do
+		#middle.column
+			#header
+				%ul#nav
+					%li
+						%a{:href => "#"} Messages
+		#right.column
+			#header
+				%ul#nav
+					%li
+						%a{:href => "#"} Questions
+	#content
+		#left.column2
+			#header2
+				#header
+					%ul#nav
+						%li
+							%a{:href => "#"} Calendar
+		#right.column2
+			%h1
+				%a{:href => "#"} News Feed
+			%ul.tabbar
+				%li ALL
+				%li CS 105
+				%li MATH 241
+			#news-feed
+				%ul
+					%li
+						#news-post
+							%h1 CS105
+							%h2 Homework #3 is posted
+							%p Chapter 2, #1-15 odd. This homework requires a great deal of time so make sure you plan accordingly. Chapter 2 of your text book can be very helpful to you.
+							#news-details
+								%span.datePosted 4 Hours ago
+								%span.atype Homework
+								%a{:href => "#"} Ask a question
+	#footer

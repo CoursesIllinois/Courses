@@ -12,8 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
@@ -27,6 +31,20 @@
     <%= f.label :isStudent %><br />
     <%= f.check_box :isStudent %>
   </div>
+  <% f.fields_for :notify_pref do |pref_form| %>
+    <div class="field">
+      <%= pref_form.label :email %><br />
+      <%= pref_form.check_box :email %>
+    </div>
+    <div class="field">
+      <%= pref_form.label :text %><br />
+      <%= pref_form.check_box :text %>
+    </div>
+    <div class="field">
+      <%= pref_form.label :android %><br />
+      <%= pref_form.check_box :android %>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

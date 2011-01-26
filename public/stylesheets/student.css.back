@@ -1,0 +1,89 @@
+#header {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #AAAAAA;
+    font-family: arial,sans-serif;
+    font-size: 0.75em;
+    padding: 10px;
+    text-transform: uppercase;
+		background-image: -webkit-gradient(
+				linear,
+				left bottom,
+				left top,
+				color-stop(0.21, rgb(219,219,219)),
+				color-stop(0.85, rgb(255,255,255))
+		);
+		background-image: -moz-linear-gradient(
+				center bottom,
+				rgb(239,239,239) 21%,
+				rgb(255,255,255) 85%
+		);
+
+}
+#header ul {
+}
+#header li a {
+    display: block;
+    padding: 10px 12px;
+}
+#header a:hover {
+    text-decoration: underline;
+}
+#header li {
+    background: none repeat scroll 0 0 #DDDDDD;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+    display: inline;
+    float: left;
+    margin: 0 4px;
+    border: 1px solid #aaaaaa;
+}
+#user-info {
+    float: right;
+}
+#classes {
+    float: left;
+}
+#nav li {
+}
+#header li:hover {
+    background: none repeat scroll 0 0 #FFF5C1;
+}
+#nav {
+    float: left;
+    overflow: hidden;
+    width: 57%;
+}
+#user-info li {
+    float: right;
+    text-transform: none;
+}
+#wrapper {
+    margin: 0 auto;
+    width: 954px;
+}
+.column {
+    background: none repeat scroll 0 0 orange;
+    float: left;
+    margin: 0 1%;
+    min-height: 500px;
+    width: 31.3333%;
+}
+#dropdown {
+    display: none;
+}
+input[name="searchbar"] {
+    border: 1px solid #AAAAAA;
+    margin: 0.55%;
+    padding: 3px;
+    width: 20%;
+}
+#content {
+    background: none repeat scroll 0 0 blue;
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 1% 0;
+}
+body {
+    background: none repeat scroll 0 0 #DFE7E9;
+}
