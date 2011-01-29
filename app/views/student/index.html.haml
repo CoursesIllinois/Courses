@@ -18,7 +18,7 @@
 			#header
 				%ul#nav
 					%li
-						%a{:href => "#"} To Do
+						%a{:href => "#"} Checklist
 		#middle.column
 			#header
 				%ul#nav
@@ -40,18 +40,24 @@
 			%h1
 				%a{:href => "#"} News Feed
 			%ul.tabbar
-				%li ALL
-				%li CS 105
-				%li MATH 241
+				%li.activetab ALL
+				- current_user.courses.each do |course|
+					%li.inactivetab= course.subjectCode + " " + course.courseNumber.to_s
 			#news-feed
 				%ul
 					%li
-						#news-post
-							%h1 CS105
-							%h2 Homework #3 is posted
-							%p Chapter 2, #1-15 odd. This homework requires a great deal of time so make sure you plan accordingly. Chapter 2 of your text book can be very helpful to you.
-							#news-details
-								%span.datePosted 4 Hours ago
-								%span.atype Homework
-								%a{:href => "#"} Ask a question
+					- current_user.courses.each do |course|
+						- course.announcements.each do |announcement|
+							%li
+								#news-post 
+									#news-header
+										%h1= course.subjectCode + " " + course.courseNumber.to_s
+										%h2= announcement.title
+										#span.dueDate= announcement.dueDate
+									%p= announcement.description
+									#news-details
+										%span.datePosted= announcement.created_at
+										%span.atype= announcement.atype
+										%a{:href => "#", :class => "ask"} Ask a question
+						
 	#footer
