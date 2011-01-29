@@ -1,5 +1,7 @@
 #header {
+    background: linear-gradient(center bottom , #1C4779 10%, #2964A8 90%) repeat scroll 0 0 white;
     background: -moz-linear-gradient(center bottom , #1C4779 10%, #2964A8 90%) repeat scroll 0 0 white;
+    background: -webkit-linear-gradient(center bottom , #1C4779 10%, #2964A8 90%) repeat scroll 0 0 white;
     border: 1px solid #0C366B;
     font-family: arial,sans-serif;
     font-size: 0.75em;
@@ -20,8 +22,13 @@
 }
 #header li {
     -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+		border-radius: 5px
+    -webkit-box-shadow: 0 1px 1px #637B9A;
     -moz-box-shadow: 0 1px 1px #637B9A;
+    box-shadow: 0 1px 1px #637B9A;
     background: -moz-linear-gradient(center bottom , #2F64A1 10%, #3783E4 90%) repeat scroll 0 0 transparent;
+    background: -webkit-linear-gradient(center bottom , #2F64A1 10%, #3783E4 90%) repeat scroll 0 0 transparent;
     border: 1px solid #0C366B;
     display: inline;
     float: left;
@@ -81,9 +88,6 @@ body {
     background: -moz-linear-gradient(center bottom , #2F64A1 10%, #2F64A1 90%) repeat scroll 0 0 transparent;
     border-top: medium none;
     color: white;
-    background: -moz-linear-gradient(center bottom , #2F64A1 10%, #2F64A1 90%) repeat scroll 0 0 transparent;
-    border-top: medium none;
-    color: white;
 }
 #header2 li a {
     padding: 5px;
@@ -102,7 +106,6 @@ body {
 #header2 #header li a {
     color: black;
     font-size: 1.2em;
-/*    text-shadow: 0 1px 2px black; */
 }
 #header2 #header {
     background: -moz-linear-gradient(center bottom , #666666 10%, #888888 90%) repeat scroll 0 0 transparent;
@@ -116,28 +119,111 @@ body {
     width: 100%;
 }
 #content {
+    font-family: arial,sans-serif;
     margin-top: 10px;
 }
-
-#content #header2{
-	padding: 0px;
+#content #header2 {
+    padding: 0;
 }
-
+#content #right h1 {
+    font-size: 1.2em;
+    text-align: center;
+		margin-bottom: 10px;
+}
 #content #right {
-    min-height: 400px;
-    width: 59.58%;
-    background: white;
+    background: none repeat scroll 0 0 #D0DAE5;
+    border: 1px solid #AAAAAA;
     display: block;
     float: left;
-    border: 1px solid #AAAAAA;
+    min-height: 400px;
+    padding: 10px;
+    width: 57.45%;
 }
 #content #left {
-    min-height: 400px;
-    width: 38%;
-    background: white;
-    margin-right: 2%;
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #AAAAAA;
     display: block;
     float: left;
-    border: 1px solid #aaaaaa;
+    margin-right: 2%;
+    min-height: 400px;
+    width: 38%;
 }
-
+#news-post {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid #AAAAAA;
+    padding: 10px;
+}
+.inactivetab {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #8B8B8B;
+}
+.activetab {
+    background: none repeat scroll 0 0 white;
+    border-color: #8B8B8B #8B8B8B white;
+    border-style: solid;
+    border-width: 1px;
+}
+.tabbar li {
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    display: inline;
+    font-size: 0.8em;
+    padding: 4px 7px;
+}
+ul.tabbar {
+    color: #666666;
+    display: inline;
+}
+#news-feed {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #8B8B8B;
+    font-size: 0.95em;
+    margin-top: 2px;
+    padding: 15px;
+    color: #666666;
+	overflow-y: auto;
+}
+#news-header h2 {
+    display: inline;
+    font-size: 1.3em;
+    color: #222222;
+    margin-left: 1em;
+}
+#news-post #news-header h1 {
+    display: inline;
+    font-size: .95em;
+    font-weight: 600;
+}
+.atype {
+    text-transform: uppercase;
+    color: #7e63ab;
+    font-size: .9em;
+    margin-left: 1em;
+}
+.ask {
+    float: right;
+}
+#news-details {
+    font-size: .8em;
+}
+#news-post{
+		position: relative;
+		margin-bottom: 30px;
+}
+#news-post p {
+    margin: 10px 0 10px 5px;
+    font-size: .9em;
+}
+#news-post a {
+    color: #5278a0;
+}
+#news-header {
+    display: inline;
+    overflow: hidden;
+}
+.datePosted {
+    color: #999;
+}
+.dueDate {
+	float: right;
+}

@@ -15,6 +15,9 @@ class ApplicationController < ActionController::Base
   end
 
   def send_text(phone, message)
+		unless phone[0] == "1"
+			phone.insert(0, "1")
+		end
     message = URI.escape(message, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
     api_call = @@api_url + "&contactNumber=" + phone + "&msg=" + message
     Net::HTTP.get URI.parse(api_call)
