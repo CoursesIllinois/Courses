@@ -34,13 +34,11 @@ a:hover {
 }
 
 h1{
-    font-size: 2.5em;
     font-weight: normal;
 }
 
 h2{
     color: #bbbbbb;
-    font-size: 1.2em;
     font-weight: normal;
     padding-bottom: 10px;
 }
