@@ -1,6 +1,7 @@
 <h1>Editing user</h1>
 
 <%= render 'form' %>
+<%= render :partial => 'notify_prefs/form', :locals => {:notify_pref => @user.notify_pref} %>
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
